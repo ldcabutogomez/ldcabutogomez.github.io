@@ -1,29 +1,383 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Web Coding Project 1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luis Cabuto | Cognitive Science at Yale</title>
+  <meta name="description" content="Luis Cabuto is a Yale cognitive science student working across computational neuroscience, EEG, machine learning, and clinical research.">
+  <meta name="author" content="Luis Cabuto">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0f0c">
+
+  <link rel="canonical" href="https://ldcabutogomez.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:title" content="Luis Cabuto | Cognitive Science at Yale">
+  <meta property="og:description" content="Academic portfolio focused on computational neuroscience, EEG, machine learning, and cognitive science.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://ldcabutogomez.github.io/">
+  <meta property="og:site_name" content="Luis Cabuto">
+  <meta property="og:image" content="https://ldcabutogomez.github.io/assets/images/1757725599518.jpg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="Portrait of Luis Cabuto wearing a navy suit and tie outdoors.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Luis Cabuto | Cognitive Science at Yale">
+  <meta name="twitter:description" content="Academic portfolio focused on computational neuroscience, EEG, machine learning, and cognitive science.">
+
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <p>
-    ROBCO INDUSTRIES (TM) TERMLINK<br>
-    Copyright 2075–2077 RobCo Industries<br>
-    Clearance: VAULT-TEC ADMINISTRATOR<br>
-    - Server 1 -
-  </p>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <h1>Welcome</h1>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="wordmark" href="#top" aria-label="Luis Cabuto, home">
+        <span class="wordmark-mark" aria-hidden="true">LC</span>
+        <span class="wordmark-text">Luis Cabuto</span>
+      </a>
 
-  <p>
-    This semester, I hope to learn some hard skills working with R and HTML
-    and applying those concepts to statistical analysis. I hope to learn
-    how studies are structured and created and begin crafting a toolset
-    that will allow me to contribute in those spaces.
-  </p>
-  <button onclick="changeBackgroundColor()">Change Background Color</button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+        <a href="#about">About</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-resume" href="assets/Luis-Cabuto-Resume.pdf" target="_blank" rel="noopener">
+          Résumé <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero shell" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="status-label"><span class="status-dot" aria-hidden="true"></span> Research portfolio / online</p>
+        <p class="eyebrow">Cognitive Science at Yale University</p>
+        <h1 id="hero-title">Luis Cabuto</h1>
+        <p class="hero-lede">I study cognition using computational neuroscience, EEG, and machine learning.</p>
+
+        <div class="hero-actions" aria-label="Profile links">
+          <a class="button button-primary" href="#research">Research</a>
+          <a class="button" href="assets/Luis-Cabuto-Resume.pdf" target="_blank" rel="noopener">
+            Résumé <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span>
+          </a>
+          <a class="button" href="https://github.com/ldcabutogomez" target="_blank" rel="noopener">
+            GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span>
+          </a>
+          <a class="button" href="https://www.linkedin.com/in/luis-cabuto/" target="_blank" rel="noopener">
+            LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span>
+          </a>
+          <a class="button" href="mailto:luis.cabutogomez@yale.edu">Email</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <figure class="hero-portrait">
+          <img
+            src="assets/images/1757725599518.jpg"
+            width="800"
+            height="800"
+            alt="Portrait of Luis Cabuto wearing a navy suit and tie outdoors."
+            decoding="async"
+            fetchpriority="high"
+          >
+        </figure>
+
+        <aside class="terminal-card hero-terminal" aria-label="Current academic information">
+          <div class="terminal-bar">
+            <span>Profile.dat</span>
+            <span class="terminal-state">Active</span>
+          </div>
+          <dl class="terminal-data terminal-data-compact">
+            <div>
+              <dt>&gt; affiliation</dt>
+              <dd>Yale University</dd>
+            </div>
+            <div>
+              <dt>&gt; current_project</dt>
+              <dd>Wada EEG Analysis</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section shell" id="research" aria-labelledby="research-title">
+      <div class="section-heading section-heading-wide">
+        <div>
+          <p class="section-index">01 / Research</p>
+          <h2 id="research-title">Current research areas</h2>
+        </div>
+        <p class="section-intro">Questions and methods at the intersection of brain, behavior, and computation.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="research-card">
+          <div class="card-meta">
+            <span>R.01</span>
+            <span>EEG</span>
+          </div>
+          <h3>Wada EEG Analysis</h3>
+          <p>Analyzing clinical EEG recorded during the Wada procedure to characterize spectral structure and hemispheric dynamics.</p>
+          <ul class="tag-list" aria-label="Methods">
+            <li>Clinical EEG</li>
+            <li>Multitaper spectra</li>
+            <li>Spectral parameterization</li>
+            <li>Hemispheric dynamics</li>
+          </ul>
+        </article>
+
+        <article class="research-card">
+          <div class="card-meta">
+            <span>R.02</span>
+            <span>fMRI</span>
+          </div>
+          <h3>fMRI MVPA</h3>
+          <p>Using multivariate decoding and representational analyses to study task and object representations in fMRI data.</p>
+          <ul class="tag-list" aria-label="Methods">
+            <li>Multivariate decoding</li>
+            <li>Representational analysis</li>
+            <li>Task representations</li>
+            <li>Object representations</li>
+          </ul>
+        </article>
+
+        <article class="research-card">
+          <div class="card-meta">
+            <span>R.03</span>
+            <span>Clinical</span>
+          </div>
+          <h3>Clinical Psychedelic Research</h3>
+          <p>Supporting research at the intersection of clinical neuroscience, psychedelic research, and PTSD-related studies.</p>
+          <ul class="tag-list" aria-label="Research areas">
+            <li>Clinical neuroscience</li>
+            <li>PTSD-related studies</li>
+            <li>Research support</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading section-heading-wide">
+        <div>
+          <p class="section-index">02 / Projects</p>
+          <h2 id="projects-title">Selected analytical work</h2>
+        </div>
+        <p class="section-intro">Research questions translated into reproducible, interpretable analysis.</p>
+      </div>
+
+      <div class="project-list">
+        <article class="project-card">
+          <div class="project-number" aria-hidden="true">01</div>
+          <div class="project-body">
+            <p class="project-status"><span class="status-dot" aria-hidden="true"></span> Current work</p>
+            <h3>Wada EEG Analysis</h3>
+            <p>Clinical EEG analysis using multitaper spectral estimates, spectral parameterization, and spatial rereferencing approaches to examine hemispheric dynamics during unilateral intracarotid anesthesia.</p>
+          </div>
+          <p class="project-methods">MATLAB / FieldTrip / Spectral analysis</p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number" aria-hidden="true">02</div>
+          <div class="project-body">
+            <p class="project-status project-status-complete">Completed analysis</p>
+            <h3>On Homecoming: Veteran Wellness by the Numbers</h3>
+            <p>An analysis of ICPSR 38304 examining associations among moral injury, purpose, social connection, loneliness, psychological wellness, and a suicide-risk flag. The data are observational, so the findings are associative rather than causal.</p>
+          </div>
+          <p class="project-methods">R / Model selection / Regression</p>
+        </article>
+      </div>
+
+      <a class="text-link" href="https://github.com/ldcabutogomez" target="_blank" rel="noopener">
+        Explore my GitHub profile <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span>
+      </a>
+    </section>
+
+    <section class="section shell" id="writing" aria-labelledby="writing-title">
+      <div class="section-heading section-heading-wide">
+        <div>
+          <p class="section-index">03 / Writing</p>
+          <h2 id="writing-title">Writing across cognition and experience</h2>
+        </div>
+        <p class="section-intro">Selected academic work connecting cognitive science, data, and questions of reintegration.</p>
+      </div>
+
+      <div class="writing-grid">
+        <article class="writing-card writing-card-featured">
+          <div class="writing-meta">
+            <span>Featured essay</span>
+            <span>9 pages / PDF</span>
+          </div>
+          <p class="writing-course">Introduction to Cognitive Science / November 2025</p>
+          <h3><cite>We Live as We Dream: The Cognitive Science of Coming Home</cite></h3>
+          <p>An academic essay examining veteran reintegration through cognitive architecture, perception, modularity, social reasoning, and language.</p>
+          <a class="button button-primary" href="assets/writing/we-live-as-we-dream.pdf" target="_blank" rel="noopener">
+            Read the essay <span aria-hidden="true">↗</span><span class="sr-only"> (PDF opens in a new tab)</span>
+          </a>
+        </article>
+
+        <aside class="writing-note" aria-label="Writing approach">
+          <p class="card-kicker">Approach</p>
+          <h3>Clear ideas, careful claims.</h3>
+          <p>I aim to make technical questions understandable without overstating what the evidence can support.</p>
+          <dl class="writing-principles">
+            <div><dt>01</dt><dd>Plain language</dd></div>
+            <div><dt>02</dt><dd>Methods in context</dd></div>
+            <div><dt>03</dt><dd>Limits made visible</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section shell" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <p class="section-index">04 / About</p>
+        <h2 id="about-title">Studying cognition through data.</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-copy">
+          <p>I am an undergraduate at Yale University studying Cognitive Science. My interests lie at the intersection of neuroscience, psychology, computer science, and machine learning, with a focus on using computational methods to study cognition and behavior.</p>
+          <p>My current research spans clinical EEG analysis, multivariate neuroimaging, psychedelic research, and veteran mental health. I am particularly interested in how beliefs are formed and updated in high-stakes or uncertain environments.</p>
+        </div>
+
+        <aside class="terminal-card about-terminal" aria-label="Research profile">
+          <div class="terminal-bar">
+            <span>Research.profile</span>
+            <span class="terminal-state">Active</span>
+          </div>
+          <dl class="terminal-data">
+            <div>
+              <dt>&gt; disciplines</dt>
+              <dd>Neuroscience / Psychology / Computer Science</dd>
+            </div>
+            <div>
+              <dt>&gt; methods</dt>
+              <dd>EEG / fMRI / Machine Learning</dd>
+            </div>
+            <div>
+              <dt>&gt; questions</dt>
+              <dd>Belief formation / Decision-making / Uncertainty</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section shell" id="journey" aria-labelledby="journey-title">
+      <div class="section-heading section-heading-wide">
+        <div>
+          <p class="section-index">05 / Journey</p>
+          <h2 id="journey-title">A nontraditional path to Yale</h2>
+        </div>
+        <p class="section-intro">Experience that continues to inform how I learn, collaborate, and approach research.</p>
+      </div>
+
+      <div class="journey-layout">
+        <figure class="journey-field-photo">
+          <img
+            src="assets/images/IMG_2441.jpeg"
+            width="1320"
+            height="1647"
+            alt="Luis Cabuto in field gear during his Marine Corps service."
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+
+        <div class="journey-story">
+          <p class="journey-lede">Before Yale, I served for nine years as a Marine Corps Joint Terminal Attack Controller. That experience shaped how I approach complex systems, uncertainty, teamwork, and high-stakes decision-making.</p>
+
+          <dl class="journey-meta" aria-label="Background summary">
+            <div>
+              <dt>Role</dt>
+              <dd>JTAC</dd>
+            </div>
+            <div>
+              <dt>Service</dt>
+              <dd>9 years</dd>
+            </div>
+            <div>
+              <dt>Current status</dt>
+              <dd>Cognitive Science, Yale</dd>
+            </div>
+          </dl>
+
+          <figure class="journey-group-photo">
+            <img
+              src="assets/images/IMG_2439.jpeg"
+              width="1320"
+              height="1313"
+              alt="Luis Cabuto in Marine Corps dress blues standing with a group at an event."
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>A moment from my Marine Corps service.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="outside" aria-labelledby="outside-title">
+      <div class="section-heading section-heading-wide">
+        <div>
+          <p class="section-index">06 / Outside the lab</p>
+          <h2 id="outside-title">Life beyond the data</h2>
+        </div>
+        <p class="section-intro">Time outdoors, physical practice, and the communities around New Haven keep the work in perspective.</p>
+      </div>
+
+      <aside class="outside-lab" aria-label="Personal interests">
+        <figure class="outside-lab-photo">
+          <img
+            src="assets/images/IMG_2440.jpeg"
+            width="1320"
+            height="1637"
+            alt="Luis Cabuto smiling while holding his dog on a mountain hike."
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+        <div class="outside-lab-copy">
+          <p class="card-kicker">Off-hours log</p>
+          <h3>Moving, learning, exploring.</h3>
+          <p>Outside the lab, I enjoy ultrarunning, hiking with my Belgian Malinois, Muay Thai, strength training, and exploring restaurants around New Haven.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section contact shell" id="contact" aria-labelledby="contact-title">
+      <div>
+        <p class="section-index">07 / Contact</p>
+        <h2 id="contact-title">Let’s talk research.</h2>
+        <p>I welcome conversations with faculty, research mentors, collaborators, and fellow students.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="button button-primary" href="mailto:luis.cabutogomez@yale.edu">Send an email</a>
+        <a class="text-link" href="https://www.linkedin.com/in/luis-cabuto/" target="_blank" rel="noopener">
+          Connect on LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>© 2026 Luis Cabuto</p>
+      <p class="footer-status"><span class="status-dot" aria-hidden="true"></span> Yale University / New Haven, CT</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
 </body>
-<script src="script.js"></script>
 </html>
-

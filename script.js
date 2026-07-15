@@ -1,22 +1,46 @@
-// Source - https://stackoverflow.com/a
-// Posted by Anatoliy, modified by community. See post 'Timeline' for change history
-// Retrieved 2026-01-16, License - CC BY-SA 3.0
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('#nav-menu');
 
-function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
+if (navToggle && navMenu) {
+  const closeMenu = ({ returnFocus = false } = {}) => {
+    navToggle.setAttribute('aria-expanded', 'false');
+    navMenu.classList.remove('is-open');
 
+    if (returnFocus) {
+      navToggle.focus();
+    }
+  };
 
+  navToggle.addEventListener('click', () => {
+    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!isOpen));
+    navMenu.classList.toggle('is-open', !isOpen);
+  });
 
-function setRandomColor() {
-  $("#colorpad").css("background-color", getRandomColor());
-}
+  navMenu.addEventListener('click', (event) => {
+    if (event.target.closest('a')) {
+      closeMenu();
+    }
+  });
 
-changeBackgroundColor = () => {
-    document.body.style.backgroundColor = getRandomColor();
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+      closeMenu({ returnFocus: true });
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    const clickedOutsideNavigation = !event.target.closest('.nav');
+
+    if (clickedOutsideNavigation && navToggle.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+    }
+  });
+
+  const desktopNavigation = window.matchMedia('(min-width: 68rem)');
+  desktopNavigation.addEventListener('change', (event) => {
+    if (event.matches) {
+      closeMenu();
+    }
+  });
 }

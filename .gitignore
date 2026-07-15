@@ -1,0 +1,7 @@
+# Raw, private source material used to prepare the public website.
+/website-context/
+
+# Temporary Microsoft Office lock files.
+~$*.docx
+~$*.pptx
+~$*.xlsx
