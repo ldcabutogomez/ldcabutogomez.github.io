@@ -717,6 +717,30 @@ h3 {
   color: var(--blue);
 }
 
+.project-visual {
+  width: min(100%, 32rem);
+  margin-top: 1.5rem;
+}
+
+.project-visual img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border-blue);
+  background: var(--blue-dark);
+}
+
+.project-visual figcaption {
+  padding-top: 0.7rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  line-height: 1.55;
+}
+
+.project-button {
+  margin-top: 1.25rem;
+}
+
 .writing-grid {
   display: grid;
   gap: 1rem;
@@ -1035,6 +1059,10 @@ h3 {
     gap: 1.5rem;
   }
 
+  .project-visual {
+    grid-column: 2;
+  }
+
   .project-methods {
     grid-column: 2;
   }
@@ -1099,6 +1127,20 @@ h3 {
 
   .project-methods {
     grid-column: 3;
+  }
+
+  .project-card-featured {
+    grid-template-columns: 2rem minmax(0, 0.85fr) minmax(22rem, 0.65fr);
+  }
+
+  .project-card-featured .project-visual {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    margin-top: 0;
+  }
+
+  .project-card-featured .project-methods {
+    grid-column: 2;
   }
 
   .contact {
