@@ -37,10 +37,78 @@ if (navToggle && navMenu) {
     }
   });
 
-  const desktopNavigation = window.matchMedia('(min-width: 68rem)');
+  const desktopNavigation = window.matchMedia('(min-width: 76rem)');
   desktopNavigation.addEventListener('change', (event) => {
     if (event.matches) {
       closeMenu();
     }
   });
+}
+
+const siteHeader = document.querySelector('.site-header');
+const sectionLinks = navMenu
+  ? [...navMenu.querySelectorAll('a[href^="#"]')]
+      .map((link) => {
+        const section = document.querySelector(link.getAttribute('href'));
+        return section ? { link, section } : null;
+      })
+      .filter(Boolean)
+  : [];
+
+if (siteHeader && sectionLinks.length) {
+  let activeSectionId = '';
+  let updateRequested = false;
+
+  const setActiveSection = (sectionId) => {
+    if (sectionId === activeSectionId) {
+      return;
+    }
+
+    activeSectionId = sectionId;
+
+    sectionLinks.forEach(({ link, section }) => {
+      const isCurrent = section.id === sectionId;
+      link.classList.toggle('is-current', isCurrent);
+
+      if (isCurrent) {
+        link.setAttribute('aria-current', 'location');
+      } else if (link.getAttribute('aria-current') === 'location') {
+        link.removeAttribute('aria-current');
+      }
+    });
+  };
+
+  const updateActiveSection = () => {
+    updateRequested = false;
+
+    const headerHeight = siteHeader.getBoundingClientRect().height;
+    const viewportOffset = Math.min(window.innerHeight * 0.25, 180);
+    const activationLine = window.scrollY + headerHeight + viewportOffset;
+    const pageBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+    let currentSection = sectionLinks[0].section;
+
+    sectionLinks.forEach(({ section }) => {
+      if (section.offsetTop <= activationLine) {
+        currentSection = section;
+      }
+    });
+
+    if (pageBottom) {
+      currentSection = sectionLinks.at(-1).section;
+    }
+
+    setActiveSection(currentSection.id);
+  };
+
+  const requestActiveSectionUpdate = () => {
+    if (!updateRequested) {
+      updateRequested = true;
+      window.requestAnimationFrame(updateActiveSection);
+    }
+  };
+
+  window.addEventListener('scroll', requestActiveSectionUpdate, { passive: true });
+  window.addEventListener('resize', requestActiveSectionUpdate);
+  window.addEventListener('load', requestActiveSectionUpdate);
+  requestActiveSectionUpdate();
 }

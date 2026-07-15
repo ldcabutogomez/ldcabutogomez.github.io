@@ -6,9 +6,10 @@ Personal academic website for Luis Cabuto, a Yale cognitive science student inte
 
 This is a dependency-free static site:
 
-- `index.html` contains all page content and metadata.
+- `index.html` contains the homepage content and metadata.
+- `projects/veteran-wellness/` contains the first research project detail page.
 - `style.css` contains the responsive visual system.
-- `script.js` provides the accessible mobile navigation.
+- `script.js` provides the accessible mobile navigation and homepage section highlighting.
 - `assets/` contains the résumé, a selected public writing sample, images, and favicon.
 
 Raw source material belongs in a local `website-context/` directory, which is intentionally ignored by Git. Only reviewed, publishable artifacts should be copied into `assets/`.

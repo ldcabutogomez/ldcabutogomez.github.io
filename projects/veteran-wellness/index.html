@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veteran Wellness Analysis | Luis Cabuto</title>
+  <meta name="description" content="A reproducible analysis of associations among moral injury, social connection, loneliness, and psychological wellness in a survey of U.S. veterans.">
+  <meta name="author" content="Luis Cabuto">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0f0c">
+
+  <link rel="canonical" href="https://ldcabutogomez.github.io/projects/veteran-wellness/">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:title" content="Veteran Wellness Analysis | Luis Cabuto">
+  <meta property="og:description" content="Methods, findings, limitations, and reproducible code for an observational analysis of veteran psychological wellness.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://ldcabutogomez.github.io/projects/veteran-wellness/">
+  <meta property="og:site_name" content="Luis Cabuto">
+  <meta property="og:image" content="https://ldcabutogomez.github.io/assets/projects/veteran-wellness-social-contribution.jpg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="Data slide comparing the associations of social contribution and combat exposure with veteran psychological wellness.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Veteran Wellness Analysis | Luis Cabuto">
+  <meta name="twitter:description" content="An observational veteran-wellness analysis with methods, limitations, and reproducible R code.">
+
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../../script.js" defer></script>
+</head>
+
+<body class="project-page" id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="wordmark" href="../../#top" aria-label="Luis Cabuto, home">
+        <span class="wordmark-mark" aria-hidden="true">LC</span>
+        <span class="wordmark-text">Luis Cabuto</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="../../#about">About</a>
+        <a href="../../#research">Research</a>
+        <a href="../../#projects" aria-current="page">Projects</a>
+        <a href="../../#writing">Writing</a>
+        <a href="../../#journey">Journey</a>
+        <a href="../../#outside">Life</a>
+        <a href="../../#contact">Contact</a>
+        <a class="nav-resume" href="../../assets/Luis-Cabuto-Resume.pdf" target="_blank" rel="noopener">
+          Résumé <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <header class="project-detail-hero shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../../#projects">Projects</a>
+        <span aria-hidden="true">/</span>
+        <span>Veteran Wellness Analysis</span>
+      </nav>
+
+      <p class="project-status project-status-complete">Completed analysis</p>
+      <h1>Veteran Wellness Analysis</h1>
+      <p class="project-detail-lede">Using a 2020 survey of U.S. veterans, I examined whether post-service belonging and social meaning were more closely associated with psychological wellness than combat exposure, service era, daily stress, identity, and demographic variables.</p>
+
+      <div class="project-detail-actions">
+        <a class="button button-primary" href="https://github.com/ldcabutogomez/on-homecoming" target="_blank" rel="noopener">
+          Code &amp; reproduce <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span>
+        </a>
+        <a class="button" href="https://htmlpreview.github.io/?https://github.com/ldcabutogomez/on-homecoming/blob/main/analysis/on-homecoming.html" target="_blank" rel="noopener">
+          Rendered analysis <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span>
+        </a>
+      </div>
+
+      <dl class="project-detail-meta" aria-label="Project metadata">
+        <div><dt>Dataset</dt><dd>ICPSR 38304</dd></div>
+        <div><dt>Analytic sample</dt><dd>1,427 respondents</dd></div>
+        <div><dt>Primary tools</dt><dd>R / R Markdown</dd></div>
+        <div><dt>Design</dt><dd>Cross-sectional</dd></div>
+      </dl>
+    </header>
+
+    <section class="project-detail-section shell" aria-labelledby="overview-title">
+      <div class="project-detail-heading">
+        <p class="section-index">01 / Overview</p>
+        <h2 id="overview-title">What I asked</h2>
+      </div>
+      <div class="project-detail-copy">
+        <p>The project was motivated by Sebastian Junger’s argument in <cite>Tribe</cite> that post-service struggle may reflect the loss of cohesion, structure, and belonging associated with military life—not trauma alone.</p>
+        <p>I tested whether purpose, social contribution, social integration, loneliness, and moral injury were more informative about psychological wellness in this sample than combat exposure, service era, daily stress, military identity, and demographic variables.</p>
+      </div>
+    </section>
+
+    <section class="project-detail-section shell" aria-labelledby="visual-title">
+      <div class="project-detail-heading">
+        <p class="section-index">02 / Visual summary</p>
+        <h2 id="visual-title">The central comparison</h2>
+      </div>
+      <figure class="project-detail-visual">
+        <img
+          src="../../assets/projects/veteran-wellness-social-contribution.jpg"
+          width="800"
+          height="800"
+          alt="Data slide comparing bivariate associations with veteran psychological wellness: social contribution has a correlation of 0.615 and combat exposure has a correlation of negative 0.087, with a cross-sectional-not-causal caveat."
+          decoding="async"
+        >
+        <figcaption>In this sample, social contribution had a substantially stronger bivariate association with psychological wellness than combat exposure. This comparison is cross-sectional and does not establish causation.</figcaption>
+      </figure>
+    </section>
+
+    <section class="project-detail-section shell" aria-labelledby="methods-title">
+      <div class="project-detail-heading">
+        <p class="section-index">03 / Methods</p>
+        <h2 id="methods-title">How I approached it</h2>
+      </div>
+      <div class="project-detail-copy">
+        <p>I constructed a three-item loneliness mean, created service-era categories from retirement year, removed 68 cases with implausible implied retirement ages below 17, and recoded gender, branch, and marital status as categorical factors.</p>
+        <ul class="project-detail-list project-detail-methods">
+          <li>Exploratory data analysis and Pearson correlations</li>
+          <li>Welch two-sample t-test</li>
+          <li>Bootstrap confidence intervals and permutation testing</li>
+          <li>Best-subsets regression with BIC model selection</li>
+          <li>Regression diagnostics and logistic regression</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-detail-section shell" aria-labelledby="findings-title">
+      <div class="project-detail-heading">
+        <p class="section-index">04 / Findings</p>
+        <h2 id="findings-title">What the models retained</h2>
+      </div>
+      <div class="project-finding-grid">
+        <article>
+          <p class="card-kicker">Wellness model</p>
+          <h3>Five retained predictors</h3>
+          <p>Moral injury, purpose, social contribution, social integration, and loneliness remained in the BIC-selected linear model.</p>
+        </article>
+        <article>
+          <p class="card-kicker">Model fit</p>
+          <h3>About 52% explained</h3>
+          <p>The final linear model explained approximately 52% of the variance in psychological wellness in this analytic sample.</p>
+        </article>
+        <article>
+          <p class="card-kicker">Second outcome</p>
+          <h3>Suicide-risk flag</h3>
+          <p>Moral injury, loneliness, and social contribution were the clearest predictors in the logistic model.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-detail-section shell" aria-labelledby="limits-title">
+      <div class="project-detail-heading">
+        <p class="section-index">05 / Limitations</p>
+        <h2 id="limits-title">What this cannot establish</h2>
+      </div>
+      <div class="project-detail-copy">
+        <ul class="project-detail-list">
+          <li>The cross-sectional design identifies associations, not causal effects.</li>
+          <li>Self-report measures may share method variance.</li>
+          <li>A ceiling effect in the wellness outcome contributed to mild heteroskedasticity.</li>
+          <li>The suicide-risk model is subject to survivorship bias and should not be read as population-level diagnosis or absolute risk.</li>
+          <li>BIC, Mallows’ Cp, and adjusted R² favored different model sizes; BIC was selected to penalize overfitting.</li>
+        </ul>
+
+        <aside class="project-data-note" aria-labelledby="data-note-title">
+          <p class="card-kicker">Data access</p>
+          <h3 id="data-note-title">Restricted data, public workflow</h3>
+          <p>The raw ICPSR 38304 data are not redistributed. The public repository includes the R Markdown source, figures, package requirements, and instructions for obtaining the dataset under its use agreement.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>© 2026 Luis Cabuto</p>
+      <p class="footer-status"><span class="status-dot" aria-hidden="true"></span> Veteran Wellness Analysis</p>
+      <a href="../../#projects">Back to projects <span aria-hidden="true">←</span></a>
+    </div>
+  </footer>
+</body>
+</html>

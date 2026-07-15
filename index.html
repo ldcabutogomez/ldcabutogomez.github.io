@@ -30,7 +30,7 @@
   <script src="script.js" defer></script>
 </head>
 
-<body>
+<body id="top">
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
@@ -51,6 +51,7 @@
         <a href="#projects">Projects</a>
         <a href="#writing">Writing</a>
         <a href="#journey">Journey</a>
+        <a href="#outside">Life</a>
         <a href="#contact">Contact</a>
         <a class="nav-resume" href="assets/Luis-Cabuto-Resume.pdf" target="_blank" rel="noopener">
           Résumé <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span>
@@ -60,12 +61,13 @@
   </header>
 
   <main id="main-content">
-    <section class="hero shell" id="top" aria-labelledby="hero-title">
+    <section class="hero shell" id="about" aria-labelledby="hero-title" data-nav-section>
       <div class="hero-copy">
         <p class="status-label"><span class="status-dot" aria-hidden="true"></span> Research portfolio / online</p>
+        <p class="hero-name">Luis Cabuto</p>
         <p class="eyebrow">Cognitive Science at Yale University</p>
-        <h1 id="hero-title">Luis Cabuto</h1>
-        <p class="hero-lede">I study cognition using computational neuroscience, EEG, and machine learning.</p>
+        <h1 id="hero-title">Studying the mind through data.</h1>
+        <p class="hero-lede">I use computational neuroscience, EEG, and machine learning to study brain and behavior.</p>
 
         <div class="hero-actions" aria-label="Profile links">
           <a class="button button-primary" href="#research">Research</a>
@@ -79,6 +81,11 @@
             LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span>
           </a>
           <a class="button" href="mailto:luis.cabutogomez@yale.edu">Email</a>
+        </div>
+
+        <div class="hero-biography">
+          <p>I am an undergraduate at Yale University studying Cognitive Science. My interests lie at the intersection of neuroscience, psychology, computer science, and machine learning.</p>
+          <p>My current research spans clinical EEG analysis, multivariate neuroimaging, psychedelic research, and veteran mental health. I am particularly interested in how beliefs are formed and updated in high-stakes or uncertain environments.</p>
         </div>
       </div>
 
@@ -108,46 +115,20 @@
               <dt>&gt; current_project</dt>
               <dd>Wada EEG Analysis</dd>
             </div>
-          </dl>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section shell" id="about" aria-labelledby="about-title">
-      <div class="section-heading">
-        <p class="section-index">01 / About</p>
-        <h2 id="about-title">Studying the mind through data.</h2>
-      </div>
-      <div class="about-content">
-        <div class="about-copy">
-          <p>I am an undergraduate at Yale University studying Cognitive Science. My interests lie at the intersection of neuroscience, psychology, computer science, and machine learning, with a focus on using computational methods to study the mind and behavior.</p>
-          <p>My current research spans clinical EEG analysis, multivariate neuroimaging, psychedelic research, and veteran mental health. I am particularly interested in how beliefs are formed and updated in high-stakes or uncertain environments.</p>
-        </div>
-
-        <aside class="terminal-card about-terminal" aria-label="Research profile">
-          <div class="terminal-bar">
-            <span>Research.profile</span>
-            <span class="terminal-state">Active</span>
-          </div>
-          <dl class="terminal-data">
-            <div>
-              <dt>&gt; disciplines</dt>
-              <dd>Neuroscience / Psychology / Computer Science</dd>
-            </div>
             <div>
               <dt>&gt; methods</dt>
               <dd>EEG / fMRI / Machine Learning</dd>
             </div>
             <div>
               <dt>&gt; questions</dt>
-              <dd>Belief formation / Decision-making / Uncertainty</dd>
+              <dd>Belief formation / Decision-making</dd>
             </div>
           </dl>
         </aside>
       </div>
     </section>
 
-    <section class="section shell" id="research" aria-labelledby="research-title">
+    <section class="section shell" id="research" aria-labelledby="research-title" data-nav-section>
       <div class="section-heading section-heading-wide">
         <div>
           <p class="section-index">02 / Research</p>
@@ -203,7 +184,7 @@
       </div>
     </section>
 
-    <section class="section shell" id="projects" aria-labelledby="projects-title">
+    <section class="section shell" id="projects" aria-labelledby="projects-title" data-nav-section>
       <div class="section-heading section-heading-wide">
         <div>
           <p class="section-index">03 / Projects</p>
@@ -229,9 +210,12 @@
             <p class="project-status project-status-complete">Completed analysis</p>
             <h3>Veteran Wellness Analysis</h3>
             <p>An analysis of ICPSR 38304 examining associations among moral injury, purpose, social connection, loneliness, psychological wellness, and a suicide-risk flag. The data are observational, so the findings are associative rather than causal.</p>
-            <a class="button project-button" href="https://github.com/ldcabutogomez/on-homecoming" target="_blank" rel="noopener">
-              View code and reproduce <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span>
-            </a>
+            <div class="project-actions">
+              <a class="button button-primary" href="projects/veteran-wellness/">Project details</a>
+              <a class="button" href="https://github.com/ldcabutogomez/on-homecoming" target="_blank" rel="noopener">
+                Code &amp; reproduce <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span>
+              </a>
+            </div>
           </div>
 
           <figure class="project-visual">
@@ -255,7 +239,7 @@
       </a>
     </section>
 
-    <section class="section shell" id="writing" aria-labelledby="writing-title">
+    <section class="section shell" id="writing" aria-labelledby="writing-title" data-nav-section>
       <div class="section-heading section-heading-wide">
         <div>
           <p class="section-index">04 / Writing</p>
@@ -291,7 +275,7 @@
       </div>
     </section>
 
-    <section class="section shell" id="journey" aria-labelledby="journey-title">
+    <section class="section shell" id="journey" aria-labelledby="journey-title" data-nav-section>
       <div class="section-heading section-heading-wide">
         <div>
           <p class="section-index">05 / Journey</p>
@@ -345,7 +329,7 @@
       </div>
     </section>
 
-    <section class="section shell" id="outside" aria-labelledby="outside-title">
+    <section class="section shell" id="outside" aria-labelledby="outside-title" data-nav-section>
       <div class="section-heading section-heading-wide">
         <div>
           <p class="section-index">06 / Outside the lab</p>
@@ -373,7 +357,7 @@
       </aside>
     </section>
 
-    <section class="section contact shell" id="contact" aria-labelledby="contact-title">
+    <section class="section contact shell" id="contact" aria-labelledby="contact-title" data-nav-section>
       <div>
         <p class="section-index">07 / Contact</p>
         <h2 id="contact-title">Let’s talk research.</h2>
