@@ -69,23 +69,132 @@
   font-size: clamp(1.5rem, 4vw, 2.2rem);
 }
 
-.schematic-stage-placeholder {
-  display: grid;
-  min-height: 14rem;
-  place-content: center;
-  gap: 0.55rem;
-  padding: 1rem;
-  border: 1px dashed var(--border-blue);
-  color: var(--blue);
-  background: rgba(7, 13, 16, 0.45);
-  font-family: var(--mono);
-  text-align: center;
+.design-schematic-figure {
+  --schematic-canvas: #071013;
+  --schematic-text: #edf4f2;
+  --schematic-muted: #a8b8b7;
+  --schematic-injected: #63dece;
+  --schematic-contralateral: #84c9ee;
+  --schematic-line: rgba(237, 244, 242, 0.36);
 }
 
-.schematic-stage-placeholder small {
-  max-width: 30rem;
+.design-schematic {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--schematic-text);
+}
+
+.schematic-canvas {
+  fill: var(--schematic-canvas);
+  stroke: var(--schematic-line);
+}
+
+.schematic-syringe {
+  fill: color-mix(in srgb, var(--schematic-injected) 14%, transparent);
+  stroke: var(--schematic-injected);
+  stroke-width: 3;
+}
+
+.schematic-injection-line,
+.schematic-vessel,
+.schematic-midline,
+.schematic-tick {
+  fill: none;
+  stroke: var(--schematic-line);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+.schematic-injection-line {
+  stroke: var(--schematic-injected);
+  stroke-width: 4;
+}
+
+.schematic-arrowhead,
+.schematic-injection-point {
+  fill: var(--schematic-injected);
+}
+
+.schematic-hemisphere {
+  stroke-width: 3;
+}
+
+.schematic-hemisphere-injected {
+  fill: color-mix(in srgb, var(--schematic-injected) 18%, var(--schematic-canvas));
+  stroke: var(--schematic-injected);
+}
+
+.schematic-hemisphere-contralateral {
+  fill: color-mix(in srgb, var(--schematic-contralateral) 13%, var(--schematic-canvas));
+  stroke: var(--schematic-contralateral);
+}
+
+.schematic-label,
+.schematic-kicker,
+.schematic-timeline-label {
+  fill: var(--schematic-text);
+  font-family: var(--mono);
+}
+
+.schematic-label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.schematic-label-injected {
+  fill: var(--schematic-injected);
+}
+
+.schematic-kicker {
+  fill: var(--schematic-muted);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.schematic-timeline-base,
+.schematic-window-baseline,
+.schematic-window-peak,
+.schematic-window-recovery {
+  stroke-linecap: round;
+  stroke-width: 8;
+}
+
+.schematic-timeline-base,
+.schematic-window-baseline {
+  stroke: var(--schematic-line);
+}
+
+.schematic-window-peak {
+  stroke: var(--schematic-injected);
+}
+
+.schematic-window-recovery {
+  stroke: var(--schematic-contralateral);
+}
+
+.schematic-timeline-label {
+  fill: var(--schematic-muted);
+  font-size: 16px;
+}
+
+.design-schematic-figure figcaption {
+  margin-top: 0.8rem;
   color: var(--muted);
-  line-height: 1.5;
+  font-size: 0.85rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .design-schematic-figure {
+    --schematic-canvas: #f4f8f7;
+    --schematic-text: #102126;
+    --schematic-muted: #40585c;
+    --schematic-injected: #087f75;
+    --schematic-contralateral: #236f99;
+    --schematic-line: rgba(16, 33, 38, 0.34);
+  }
 }
 
 .wada-hero-copy {

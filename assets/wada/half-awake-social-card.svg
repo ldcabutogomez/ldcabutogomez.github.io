@@ -3,10 +3,22 @@
   <desc id="description">A dark teal title card reading Half Awake and describing a primary bipolar EEG analysis of a within-participant hemispheric perturbation.</desc>
   <rect width="1200" height="630" fill="#091013"/>
   <path d="M0 105h1200M0 210h1200M0 315h1200M0 420h1200M0 525h1200M200 0v630M400 0v630M600 0v630M800 0v630M1000 0v630" stroke="#84c9ee" stroke-opacity=".055"/>
-  <circle cx="1028" cy="315" r="178" fill="#09211f" stroke="#63dece" stroke-opacity=".35" stroke-width="2"/>
-  <path d="M1028 137a178 178 0 0 0 0 356z" fill="#63dece" fill-opacity=".08"/>
-  <path d="M1028 137v356" stroke="#84c9ee" stroke-opacity=".55" stroke-width="2"/>
-  <circle cx="1028" cy="315" r="12" fill="#63dece"/>
+  <path d="M1018 143c-88 0-141 68-141 154 0 82 50 144 141 144z" fill="#63dece" fill-opacity=".12" stroke="#63dece" stroke-width="3"/>
+  <path d="M1031 143c88 0 141 68 141 154 0 82-50 144-141 144z" fill="#84c9ee" fill-opacity=".08" stroke="#84c9ee" stroke-width="3"/>
+  <path d="M1025 145v294" stroke="#84c9ee" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M822 259c45 0 65 13 95 42" fill="none" stroke="#63dece" stroke-width="5"/>
+  <path d="M918 301l-18-4 7-17z" fill="#63dece"/>
+  <rect x="750" y="238" width="72" height="36" rx="5" fill="#63dece" fill-opacity=".08" stroke="#63dece" stroke-width="3"/>
+  <line x1="763" y1="246" x2="763" y2="266" stroke="#63dece" stroke-width="3"/>
+  <text x="948" y="299" fill="#63dece" font-family="ui-monospace, monospace" font-size="15" text-anchor="middle">INJECTED</text>
+  <text x="1097" y="299" fill="#84c9ee" font-family="ui-monospace, monospace" font-size="15" text-anchor="middle">CONTRALATERAL</text>
+  <line x1="766" y1="485" x2="1160" y2="485" stroke="#a8b8b7" stroke-opacity=".35" stroke-width="6" stroke-linecap="round"/>
+  <line x1="846" y1="485" x2="1007" y2="485" stroke="#63dece" stroke-width="6" stroke-linecap="round"/>
+  <line x1="1007" y1="485" x2="1160" y2="485" stroke="#84c9ee" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="846" cy="485" r="8" fill="#63dece"/>
+  <text x="846" y="517" fill="#a8b8b7" font-family="ui-monospace, monospace" font-size="13" text-anchor="middle">INJECTION</text>
+  <text x="926" y="469" fill="#63dece" font-family="ui-monospace, monospace" font-size="13" text-anchor="middle">PEAK</text>
+  <text x="1083" y="469" fill="#84c9ee" font-family="ui-monospace, monospace" font-size="13" text-anchor="middle">RECOVERY</text>
   <rect x="72" y="68" width="64" height="64" fill="#09211f" stroke="#63dece" stroke-width="2"/>
   <text x="104" y="109" fill="#63dece" font-family="ui-monospace, monospace" font-size="28" font-weight="700" text-anchor="middle">W</text>
   <text x="168" y="110" fill="#63dece" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="3">WADA EEG · PRIMARY BIPOLAR ANALYSIS</text>

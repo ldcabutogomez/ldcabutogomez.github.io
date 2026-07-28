@@ -87,10 +87,58 @@
         <div class="schematic-shell" aria-labelledby="schematic-title">
           <p class="card-kicker">Study design</p>
           <h2 id="schematic-title">One injection, two simultaneous signals</h2>
-          <div class="schematic-stage-placeholder" role="img" aria-label="Design schematic pending Stage 4">
-            <span>Design schematic</span>
-            <small>Injection · injected hemisphere · contralateral hemisphere · peak · recovery</small>
-          </div>
+          <figure class="design-schematic-figure">
+            <svg class="design-schematic" viewBox="0 0 720 420" role="img" aria-labelledby="design-schematic-title design-schematic-description">
+              <title id="design-schematic-title">Within-participant Wada EEG design</title>
+              <desc id="design-schematic-description">A carotid injection points toward one injected hemisphere while the contralateral hemisphere is recorded simultaneously. A qualitative timeline marks baseline, injection, peak, and recovery windows.</desc>
+              <defs>
+                <marker id="schematic-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                  <path d="M0 0l10 5-10 5z" class="schematic-arrowhead"/>
+                </marker>
+              </defs>
+
+              <rect class="schematic-canvas" x="1" y="1" width="718" height="418" rx="20"/>
+
+              <g aria-hidden="true">
+                <g class="schematic-syringe" transform="translate(54 92) rotate(-8)">
+                  <rect x="0" y="0" width="84" height="38" rx="6"/>
+                  <line x1="18" y1="8" x2="18" y2="30"/>
+                  <line x1="84" y1="19" x2="126" y2="19"/>
+                  <line x1="-18" y1="19" x2="0" y2="19"/>
+                  <line x1="-18" y1="5" x2="-18" y2="33"/>
+                </g>
+                <path class="schematic-injection-line" d="M176 112C225 116 245 137 278 174" marker-end="url(#schematic-arrow)"/>
+
+                <path class="schematic-vessel" d="M317 238c-10-40-7-78 7-112M317 238c25-28 42-63 50-104M317 238c-35-24-58-56-70-96"/>
+                <circle class="schematic-injection-point" cx="317" cy="238" r="8"/>
+
+                <path class="schematic-hemisphere schematic-hemisphere-injected" d="M354 51c-77 0-124 61-124 139 0 72 44 128 124 128z"/>
+                <path class="schematic-hemisphere schematic-hemisphere-contralateral" d="M366 51c77 0 124 61 124 139 0 72-44 128-124 128z"/>
+                <path class="schematic-midline" d="M360 53v263"/>
+              </g>
+
+              <text class="schematic-label schematic-label-injected" x="292" y="176" text-anchor="middle">Injected</text>
+              <text class="schematic-label schematic-label-injected" x="292" y="201" text-anchor="middle">hemisphere</text>
+              <text class="schematic-label" x="428" y="176" text-anchor="middle">Contralateral</text>
+              <text class="schematic-label" x="428" y="201" text-anchor="middle">hemisphere</text>
+              <text class="schematic-kicker" x="56" y="62">CAROTID INJECTION</text>
+              <text class="schematic-kicker" x="360" y="36" text-anchor="middle">SIMULTANEOUS EEG</text>
+
+              <g class="schematic-timeline" aria-hidden="true">
+                <line class="schematic-timeline-base" x1="64" y1="359" x2="656" y2="359"/>
+                <line class="schematic-window-baseline" x1="64" y1="359" x2="226" y2="359"/>
+                <line class="schematic-window-peak" x1="226" y1="359" x2="432" y2="359"/>
+                <line class="schematic-window-recovery" x1="432" y1="359" x2="656" y2="359"/>
+                <circle class="schematic-injection-point" cx="226" cy="359" r="8"/>
+                <line class="schematic-tick" x1="226" y1="339" x2="226" y2="379"/>
+              </g>
+              <text class="schematic-timeline-label" x="64" y="397">Baseline</text>
+              <text class="schematic-timeline-label" x="226" y="329" text-anchor="middle">Injection</text>
+              <text class="schematic-timeline-label schematic-label-injected" x="329" y="397" text-anchor="middle">Peak window</text>
+              <text class="schematic-timeline-label" x="544" y="397" text-anchor="middle">Recovery window</text>
+            </svg>
+            <figcaption>One hemisphere receives the injection; both hemispheres remain in the same recording and participant-level contrast.</figcaption>
+          </figure>
         </div>
       </div>
 
