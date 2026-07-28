@@ -34,7 +34,7 @@
     "portfolio": "../"
   },
   "takeaway": {
-    "statement": "In a frozen cohort of 27 participants, the standard-bipolar aperiodic exponent showed a positive injected-minus-contralateral interaction.",
+    "statement": "In a locked sample of 27 participants, the standard-bipolar aperiodic exponent showed a positive injected-minus-contralateral interaction.",
     "note": "The mean interaction was 0.245 exponent units (95% CI 0.043–0.447; raw two-sided p=.019) in the primary standard-bipolar analysis."
   },
   "scientificLogic": [
@@ -232,9 +232,9 @@
     {
       "id": "poster",
       "label": "Download Full Poster",
-      "description": "The current poster contains participant-level clinical material and is not approved for public release.",
-      "href": null,
-      "available": false,
+      "description": "The final one-page REVU poster is available as a PDF.",
+      "href": "../assets/wada/poster/wada-eeg-poster.pdf",
+      "available": true,
       "download": true,
       "external": false
     },

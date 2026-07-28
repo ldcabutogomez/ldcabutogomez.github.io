@@ -228,6 +228,10 @@
   line-height: 1.5;
 }
 
+.wada-subtitle + .wada-poster-title {
+  margin-top: 1rem;
+}
+
 .wada-poster-title {
   display: inline-block;
   max-width: 55rem;
@@ -399,6 +403,21 @@
   max-width: 42rem;
 }
 
+.status-current {
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+}
+
+.author-todo {
+  padding-left: 0.7rem;
+  margin: 0.75rem 0 0;
+  border-left: 2px solid var(--amber);
+  color: var(--amber);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+}
+
 .status-grid {
   display: grid;
   gap: clamp(2rem, 6vw, 4rem);
@@ -446,6 +465,15 @@
   font-size: 0.67rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.status-list .status-list-title-only {
+  display: block;
+  padding-block: 0.75rem;
+}
+
+.status-list-title-only h4 {
+  margin: 0;
 }
 
 .takeaway-card {

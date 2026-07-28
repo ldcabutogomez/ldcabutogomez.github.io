@@ -27,7 +27,7 @@ The permanent GitHub Pages route is `/wada/`. The deployment workflow renders `w
 - Do not add CSD numerical results or montage comparisons. CSD may appear only in clearly labeled topographic visualizations.
 - Page layout lives in `wada/index.template.html`; reusable figure, result, method, and resource renderers live in `scripts/render-wada.mjs`; page-specific styling lives in `wada/wada.css`. Do not hand-edit generated `wada/index.html`.
 - Put only scientifically reviewed, privacy-reviewed, and appropriately licensed web-preview figures in `assets/wada/figures/`; follow that directory's README and keep full-resolution scientific originals unmodified.
-- Add the final poster PDF at a stable path such as `assets/wada/poster/wada-eeg-poster.pdf`, then set the poster resource's `href` and `available: true` in `wada/content.json`. Until then, the poster control displays “Coming soon” without a link.
+- The approved final poster is published at `assets/wada/poster/wada-eeg-poster.pdf`; its link and availability are controlled by the `poster` resource in `wada/content.json`.
 - Update abstract, supplement, code, and figure-download URLs in the centralized `resources` and `figures` arrays. An unavailable resource should keep `available: false` and `href: null`.
 - The current social card is generated from `assets/wada/half-awake-social-card.svg`; keep its PNG export at `assets/wada/half-awake-social-card.png` at exactly 1200×630 pixels.
 

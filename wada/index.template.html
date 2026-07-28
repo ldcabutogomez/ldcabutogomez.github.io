@@ -66,23 +66,22 @@
   <main id="main-content">
     <header class="wada-hero shell" aria-labelledby="wada-title">
       <div class="wada-hero-copy">
-        <p class="wada-status"><span class="status-dot" aria-hidden="true"></span><span>{{PAGE_STATUS}}</span></p>
         <h1 id="wada-title">{{PAGE_TITLE}}</h1>
-        <p class="wada-poster-title">{{POSTER_TITLE}}</p>
         <p class="wada-subtitle">{{PAGE_SUBTITLE}}</p>
+        <p class="wada-poster-title">{{POSTER_TITLE}}</p>
 
         <div class="wada-actions" id="hero-actions" aria-label="Project actions">
 <!-- WADA:HERO_ACTIONS -->
         </div>
-        <p class="wada-short-url"><span aria-hidden="true">↳</span> <span>{{SHORT_URL}}</span></p>
       </div>
 
       <div class="hero-snapshot">
         <div class="takeaway-card">
           <p class="card-kicker">Primary result</p>
-          <h2 id="takeaway-title">The result, at a glance</h2>
+          <h2 id="takeaway-title">The sedated hemisphere's exponent rose. Its twin did not.</h2>
           <p class="takeaway-statement">{{TAKEAWAY_STATEMENT}}</p>
           <p class="takeaway-note">{{TAKEAWAY_NOTE}}</p>
+          <p class="author-todo">TODO(luis): calibration sentence</p>
         </div>
         <div class="schematic-shell" aria-labelledby="schematic-title">
           <p class="card-kicker">Study design</p>
@@ -179,6 +178,7 @@
         <div>
           <p class="section-index">01 / Design</p>
           <h2 id="methods-title">From clinical EEG to a within-brain contrast</h2>
+          <p class="author-todo">TODO(luis): role attribution</p>
         </div>
         <p>The current pipeline centers the predefined standard-bipolar montage and a paired, within-participant interaction.</p>
       </div>
@@ -190,8 +190,8 @@
     <section class="wada-section shell findings-section" id="findings" aria-labelledby="results-title" data-nav-section>
       <header class="findings-heading">
         <p class="section-index">02 / Findings</p>
-        <h2 id="results-title">Primary bipolar findings</h2>
-        <p>Aggregate results distinguish the primary exponent interaction from oscillatory and descriptive comparison measures.</p>
+        <h2 id="results-title">What the numbers show, and what they do not</h2>
+        <p>The exponent effect held. The oscillatory measures did not.</p>
       </header>
       <div class="result-grid" id="result-grid">
 <!-- WADA:RESULTS -->
@@ -201,21 +201,22 @@
     <section class="wada-section shell status-section" id="status" aria-labelledby="status-title" data-nav-section>
       <div class="status-heading">
         <p class="card-kicker">Status and contact</p>
-        <h2 id="status-title">What is available now</h2>
+        <h2 id="status-title">Status and contact</h2>
+        <p class="wada-status status-current"><span class="status-dot" aria-hidden="true"></span><span>{{PAGE_STATUS}}</span></p>
       </div>
 
       <div class="status-grid">
         <div class="status-block" aria-labelledby="figures-title">
-          <h3 id="figures-title">Explore the analysis</h3>
-          <p>Candidate figures remain private until scientific, privacy, and licensing review is complete; CSD is retained only for candidate topographic visualization.</p>
+          <h3 id="figures-title">Figures, and why they are not public yet</h3>
+          <p>Standalone scientific figures remain embargoed until aggregate-only replacements complete scientific, privacy, and licensing review. The final poster PDF is public.</p>
           <ul class="status-list" id="figures">
 <!-- WADA:FIGURES -->
           </ul>
         </div>
 
         <div class="status-block" aria-labelledby="resources-title">
-          <h3 id="resources-title">Continue exploring</h3>
-          <p>Downloads remain unavailable until each resource passes its required scientific, privacy, and licensing review.</p>
+          <h3 id="resources-title">Availability and timeline</h3>
+          <p>The final poster is available now. The next standalone figure release occurs when aggregate-only replacements satisfy the conditions stated under “Figures, and why they are not public yet.”</p>
           <ul class="status-list" id="resource-grid">
 <!-- WADA:RESOURCES -->
           </ul>
@@ -225,8 +226,8 @@
       <div class="contact-panel">
         <div>
           <p class="card-kicker">Contact</p>
-          <h3 id="contact-title">Questions are welcome</h3>
-          <p>For questions about the methods, project status, or future poster release, contact {{AUTHOR}} at {{AFFILIATION}}.</p>
+          <h3 id="contact-title">Contact</h3>
+          <p>For questions about the methods or project status, contact {{AUTHOR}} at {{AFFILIATION}}.</p>
           <div class="contact-links" id="contact-links">
 <!-- WADA:CONTACT_LINKS -->
           </div>

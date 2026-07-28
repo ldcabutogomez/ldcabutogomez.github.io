@@ -1,12 +1,11 @@
 # Wada poster asset
 
-Place the reviewed full-resolution poster PDF here without modifying its scientific content. The suggested stable filename is:
+The approved full-resolution poster PDF is published at:
 
 `wada-eeg-poster.pdf`
 
-Then update the `poster` entry in `wada/content.js`:
+Its SHA-256 is:
 
-- set `href` to `../assets/wada/poster/wada-eeg-poster.pdf`
-- set `available` to `true`
+`8b9b2892ce7d91c134653c9f20a42b387c9c94384205b5fffbbdc20d61e2640b`
 
-The hero control and resource card will become working links automatically. Until the PDF exists, both remain non-clickable “Coming soon” items.
+The `poster` entry in `wada/content.json` controls the hero and status links. Replace the PDF only with an explicitly approved public version, preserve its scientific content, and update the recorded hash.
