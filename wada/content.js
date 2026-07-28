@@ -1,38 +1,38 @@
 /*
  * Scientific and project content for /wada/.
  *
- * Confirmed methods and identity fields were integrated from the privacy-audited
- * Wada handoff extracted on 2026-07-25. Missing, conflicting, or privacy-blocked
- * material remains visibly unresolved. Resource links with available: false render
- * as non-clickable "Coming soon" items.
+ * This draft follows the privacy-conscious handoff dated 27 July 2026 and the
+ * project owner's instruction to report bipolar results only. CSD is mentioned
+ * solely as the transform used for candidate topographic visualizations. Public
+ * figures and downloadable resources remain unavailable pending review.
  */
 window.WADA_CONTENT = {
   contentReview: {
-    overallStatus: "partial / conflicts unresolved",
-    methodsStatus: "confirmed where stated",
-    resultsStatus: "pending scientific review",
+    overallStatus: "current primary analysis",
+    methodsStatus: "current implemented bipolar pipeline",
+    resultsStatus: "primary bipolar results updated",
     figuresStatus: "no public-ready scientific figures",
-    privacyAudit: "passed for the integrated handoff"
+    privacyAudit: "pending for every proposed asset"
   },
 
   page: {
-    title: "Wada EEG Project",
-    posterTitle: "[INSERT APPROVED PUBLIC POSTER TITLE]",
-    subtitle: "A methods-focused overview of within-participant hemispheric EEG contrasts during unilateral anesthesia",
-    description: "A methods-focused overview of Luis D. Cabuto-Gomez’s Wada EEG project examining aperiodic spectral structure and oscillatory activity during unilateral hemispheric anesthesia.",
+    title: "Half Awake",
+    posterTitle: "A Within-Brain Comparison of Aperiodic and Oscillatory EEG During Unilateral Methohexital Anesthesia",
+    subtitle: "Primary bipolar EEG analysis of a rare within-participant hemispheric perturbation",
+    description: "Half Awake examines aperiodic and oscillatory EEG changes during unilateral methohexital anesthesia using a standard-bipolar, within-participant hemispheric contrast.",
     canonicalUrl: "https://ldcabutogomez.github.io/wada/",
     shortUrl: "ldcabutogomez.github.io/wada/",
-    status: "Methods implemented and versioned / public results pending review",
-    lastUpdated: "25 July 2026"
+    status: "Primary bipolar analysis / results updated",
+    lastUpdated: "28 July 2026"
   },
 
   identity: {
     author: "Luis D. Cabuto-Gomez",
-    affiliation: "Yale School of Medicine",
+    affiliation: "Yale University",
     program: "REVU Summer Research Program 2026",
-    lab: "Randolph Helfrich Lab",
-    collaborators: "Janna Helfrich, MD — poster coauthor; [INSERT COAUTHOR AFFILIATION]",
-    posterSession: "[INSERT POSTER SESSION, MEETING, DATE, AND LOCATION]",
+    primaryMentor: "Janna Helfrich, MD — Yale School of Medicine",
+    researchGroup: "Janna Helfrich, MD’s research group",
+    supportingLab: "Randolph Helfrich, MD, PhD / Randolph Helfrich Lab — collaborating and technical support",
     email: "mailto:luis.cabuto@yale.edu",
     github: "https://github.com/ldcabutogomez",
     linkedin: "https://www.linkedin.com/in/luis-cabuto/",
@@ -40,53 +40,53 @@ window.WADA_CONTENT = {
   },
 
   takeaway: {
-    statement: "[INSERT FINAL PRIMARY RESULT AND INTERPRETATION]",
-    note: "No numerical result or conclusion has been approved for public release. Final wording must match the locked poster and reviewed statistical analysis."
+    statement: "In a frozen cohort of 27 participants, the standard-bipolar aperiodic exponent showed a positive injected-minus-contralateral interaction.",
+    note: "The mean interaction was 0.245 exponent units (95% CI 0.043–0.447; raw two-sided p=.019) in the primary standard-bipolar analysis."
   },
 
   scientificLogic: [
     {
-      title: "Intracarotid injection",
-      description: "An intracarotid injection targets the ipsilateral hemisphere; final public medication wording is pending approval."
+      title: "Unilateral anesthesia",
+      description: "Methohexital is administered through one carotid artery to produce temporary, predominantly unilateral cerebral anesthesia."
     },
     {
-      title: "Targeted hemispheric anesthesia",
-      description: "The procedure creates a transient, lateralized perturbation while both hemispheres are recorded."
+      title: "Two conditions",
+      description: "EEG is compared between baseline and anesthesia within each hemisphere of the same participant."
     },
     {
-      title: "Within-hemisphere EEG change",
-      description: "Baseline-to-anesthesia change is estimated separately on the injected and contralateral sides."
+      title: "Two hemispheres",
+      description: "Baseline-to-anesthesia change is estimated separately for the injected and contralateral sides."
     },
     {
-      title: "Injected versus contralateral",
-      description: "The two changes are contrasted within the same participant and recording session."
+      title: "Difference of differences",
+      description: "The contralateral change is subtracted from the injected-side change to test for a lateralized interaction."
     },
     {
-      title: "Candidate marker evaluation",
-      description: "Aperiodic structure and prespecified oscillatory comparison families are evaluated without assuming superiority."
+      title: "Candidate features",
+      description: "The same bipolar contrast is applied to aperiodic exponent, theta peak strength, and descriptive aperiodic offset."
     }
   ],
 
-  withinBrainDesign: "Each participant provides their own simultaneous differential comparison. Baseline-to-anesthesia change is calculated separately in the injected and contralateral hemispheres, followed by an injected-minus-contralateral interaction contrast. The contralateral hemisphere is not an untreated control because unilateral injection may still produce bilateral spectral changes.",
+  withinBrainDesign: "Each participant contributes baseline and anesthesia measurements from both hemispheres. The principal interaction is [(anesthesia − baseline) injected] − [(anesthesia − baseline) contralateral]. The contralateral hemisphere is a simultaneous within-participant comparator, not an untreated or unaffected control.",
 
   researchQuestion: {
-    introduction: "Can spectral parameterization distinguish a lateralized injected-hemisphere anesthetic response from bilateral broadband movement and arousal effects during post-injection clinical testing, using the opposite hemisphere as a within-participant differential comparison?",
+    introduction: "Does the aperiodic EEG exponent change more after unilateral methohexital administration in the injected hemisphere than in the contralateral hemisphere, and does oscillatory theta peak strength show the same pattern?",
     points: [
       {
-        title: "A rare within-participant contrast",
-        text: "The injection targets one ipsilateral hemisphere while both hemispheres are recorded simultaneously, reducing dependence on between-person comparisons."
+        title: "A rare natural experiment",
+        text: "The Wada procedure temporarily perturbs one hemisphere while EEG is recorded from both sides, enabling a within-participant comparison."
       },
       {
-        title: "A difficult clinical signal",
-        text: "Movement, muscle activity, shivering, arousal, and behavioral testing can produce bilateral broadband changes after injection."
+        title: "A challenging clinical signal",
+        text: "Movement, muscle activity, arousal, and behavioral testing can create broadband changes that are shared across hemispheres."
       },
       {
-        title: "Separate background and peaks",
-        text: "The analysis separates aperiodic offset and exponent from periodic peaks so broadband spectral shifts are not automatically interpreted as oscillatory changes."
+        title: "Background and peaks",
+        text: "Spectral parameterization separates the aperiodic background from detected oscillatory peaks instead of treating every power shift as rhythmic activity."
       },
       {
-        title: "Spatial specificity matters",
-        text: "The injected-minus-contralateral interaction tests whether change is greater over the targeted hemisphere rather than merely bilateral; it does not itself establish significance."
+        title: "Lateralization, not an untreated control",
+        text: "The injected-minus-contralateral interaction asks whether change follows the injected side; it does not assume the other hemisphere is unaffected."
       }
     ]
   },
@@ -95,179 +95,157 @@ window.WADA_CONTENT = {
     {
       label: "Clinical context",
       title: "Wada procedure",
-      summary: "An intracarotid injection targets the ipsilateral hemisphere while EEG is recorded from both hemispheres. The opposite hemisphere is a simultaneous differential comparison, not an untreated control. [INSERT APPROVED PUBLIC MEDICATION TERMINOLOGY.]"
+      summary: "Methohexital is administered through one carotid artery to produce temporary, predominantly unilateral cerebral anesthesia while EEG is recorded from both hemispheres."
     },
     {
       label: "Signal preparation",
       title: "EEG preprocessing",
-      summary: "Clinical labels are standardized to a 23-channel set after Fp1/Fp2 and nonstandard channels are removed. Supported 512-Hz recordings are resampled to 256 Hz; continuous data are demeaned, linearly detrended, and high-pass filtered at 0.5 Hz with a fourth-order zero-phase Butterworth filter."
+      summary: "A fixed 23-channel scalp set is retained after Fp1, Fp2, and nonstandard channels are removed. Supported 512-Hz recordings are resampled to 256 Hz; continuous data are demeaned, linearly detrended, and high-pass filtered at 0.5 Hz."
     },
     {
       label: "Quality control",
       title: "Artifact handling",
-      summary: "Approved manual curation uses clean segments of at least 2 seconds. Otherwise, nonoverlapping 4-second epochs enter an objective gate requiring both robust-z peak-to-peak amplitude greater than 4 and absolute peak-to-peak amplitude greater than 300 µV; a 500-µV backstop is surfaced for review and defaults to keep."
+      summary: "Recordings use either approved manual clean segments or an objective 4-second epoch gate based on robust and absolute peak-to-peak amplitude. Standard conditions require at least 15 accepted epochs; curated conditions require at least 50 seconds."
     },
     {
-      label: "Spatial transform",
-      title: "Current-source-density signals",
-      summary: "A FieldTrip spline surface-Laplacian/CSD transform uses standard_1005.elc electrode positions after reviewed bad channels are excluded. CSD is the primary confirmatory montage; standard bipolar is a separate sensitivity analysis. CSD is a sensor-space spatial transform, not source localization."
+      label: "Primary montage",
+      title: "Standard bipolar signals",
+      summary: "A predefined 12-pair bipolar montage is derived from cleaned continuous data before epoch construction. Each signal is the first electrode minus the second, and pair laterality is aligned to the injected side."
     },
     {
-      label: "Primary confirmatory ROI",
-      title: "Tier 1 MCA-lateral ROI",
-      summary: "Left hemisphere: F3, C3, P3. Right hemisphere: F4, C4, P4. This fronto-central-parietal sensor-space approximation of lateral MCA territory is the locked primary ROI; the older temporal-electrode set is legacy-only."
+      label: "Primary region",
+      title: "Tier-1 bipolar ROI",
+      summary: "The primary parasagittal region uses F3–C3 and C3–P3 on the left and F4–C4 and C4–P4 on the right. The injection side determines which pair set is labeled injected or contralateral."
     },
     {
-      label: "Epoch definition",
-      title: "Analysis windows",
-      summary: "Baseline begins up to 180 seconds before injection and ends 10 seconds before injection. Whole accepted segments are accumulated backward to a 100-second target without splitting the crossing segment. Anesthesia: [INSERT RECONCILED START-WINDOW WORDING; EXECUTABLE SOURCE DATA BEGIN AT +15 SECONDS WHILE THE METHODS CONTRACT STATES +10 SECONDS.]"
+      label: "Analysis windows",
+      title: "Paired accepted segments",
+      summary: "The source baseline spans up to 180 seconds before injection and ends 10 seconds before it; anesthesia source data begin 15 seconds after injection. Accepted whole segments are accumulated toward a 100-second target without splitting boundary segments."
     },
     {
       label: "Spectral estimator",
       title: "Multitaper spectra",
-      summary: "Linear-power DPSS mtmfft spectra use 2-Hz smoothing and a 0.5-Hz frequency grid, calculated per accepted segment and averaged in linear power with duration weighting. Padding: [INSERT RECONCILED WORDING; ACTIVE CODE USES 180 SECONDS WHILE THE METHODS CONTRACT STATES maxperlen.]"
+      summary: "FieldTrip DPSS multitaper spectra use 2-Hz smoothing, a 0.5-Hz frequency grid, and 180-second padding. Spectra are estimated per accepted segment and averaged in linear power using segment duration as the weight."
     },
     {
       label: "Spectral model",
-      title: "Aperiodic and periodic parameterization",
-      summary: "Fixed-mode FOOOF/specparam is fitted to each duration-weighted average PSD, not per epoch or after channel/participant pooling. Settings are 1–6 Hz peak-width limits, at most 6 peaks, minimum peak height 0.1, peak threshold 2, and fit ranges of 2–35 Hz or 2–25 Hz depending on the hardware tier."
+      title: "Aperiodic and periodic features",
+      summary: "Fixed-mode FOOOF fitting separates aperiodic exponent and offset from detected peaks. Fits use 2–35 Hz or 2–25 Hz according to acquisition hardware, with theta defined as the strongest accepted peak from 4–8 Hz."
     },
     {
-      label: "Prespecified frequencies",
-      title: "Oscillatory comparison families",
-      summary: "Confirmed bands are theta 4–8 Hz, alpha 8–13 Hz, and restricted delta 2–4 Hz. Restricted delta remains broadband/offset-confounded and sensitivity-only. [INSERT APPROVED OSCILLATORY ENDPOINT: SCHEMA-V3 THETA PEAK POWER OR EXPLORATORY SCHEMA-V4 PERIODIC AREA.]"
-    },
-    {
-      label: "Contrast and inference",
-      title: "Confirmatory analysis plan",
-      summary: "The interaction is [(anesthesia − baseline) injected] − [(anesthesia − baseline) contralateral]. The locked schema-v3 exponent analysis uses a one-sided participant-level Monte Carlo sign-flip test of the studentized mean interaction, α = 0.05, with 100,000 sign flips; numerical results remain withheld pending review."
+      label: "Primary inference",
+      title: "Within-participant group test",
+      summary: "The primary exponent result uses a two-sided paired t test of the injected-minus-contralateral interaction. The displayed p-value is raw, and the saved aggregate result does not provide a standardized effect size."
     }
   ],
 
   figures: [
     {
-      id: "procedure",
-      title: "Wada procedure / Circle of Willis schematic",
-      availability: "Attribution and license pending",
-      interpretation: "[INSERT INTERPRETATION AFTER A LICENSED FINAL SCHEMATIC IS APPROVED]",
-      caption: "[INSERT FINAL CAPTION AND ATTRIBUTION]",
-      methodsNote: "No finalized standalone export with documented attribution and reuse permission is currently available.",
+      id: "bipolar-psd",
+      title: "Aggregate bipolar spectra",
+      availability: "Scientific and privacy review pending",
+      interpretation: "Candidate exports summarize group-level spectra before and during anesthesia for the injected and contralateral hemispheres.",
+      caption: "A reviewed aggregate-only figure will be added after scientific and privacy approval.",
+      methodsNote: "Current aggregate PSD exports contain no visible participant trajectories, but they have not completed scientific, privacy, or website-use review.",
       image: null,
       width: null,
       height: null,
       aspectRatio: "4 / 3",
-      alt: "[INSERT DESCRIPTIVE ALT TEXT FOR THE APPROVED PROCEDURE SCHEMATIC]",
+      alt: "Placeholder for aggregate bipolar power spectra comparing baseline and anesthesia in both hemispheres.",
       fullResolutionUrl: null,
-      suggestedPath: "../assets/wada/figures/01-wada-procedure.webp"
+      suggestedPath: "../assets/wada/figures/01-bipolar-spectra.webp"
     },
     {
-      id: "spectrogram",
-      title: "Representative EEG or spectrogram",
-      availability: "Not available for public display",
-      interpretation: "[INSERT ONLY AFTER A PRIVACY-APPROVED PUBLIC FIGURE EXISTS]",
-      caption: "[INSERT FINAL PRIVACY-APPROVED FIGURE CAPTION]",
-      methodsNote: "No representative EEG or spectrogram has been approved for public packaging.",
-      image: null,
-      width: null,
-      height: null,
-      aspectRatio: "4 / 3",
-      alt: "[INSERT DESCRIPTIVE ALT TEXT FOR A PRIVACY-APPROVED FIGURE]",
-      fullResolutionUrl: null,
-      suggestedPath: "../assets/wada/figures/02-representative-eeg.webp"
-    },
-    {
-      id: "parameterization",
-      title: "PSD and spectral parameterization example",
-      availability: "Not available for public display",
-      interpretation: "[INSERT ONLY AFTER A PRIVACY-APPROVED PUBLIC FIGURE EXISTS]",
-      caption: "[INSERT FINAL PRIVACY-APPROVED FIGURE CAPTION]",
-      methodsNote: "No spectral-fit example has been approved for public packaging.",
-      image: null,
-      width: null,
-      height: null,
-      aspectRatio: "4 / 3",
-      alt: "[INSERT DESCRIPTIVE ALT TEXT FOR A PRIVACY-APPROVED PSD FIGURE]",
-      fullResolutionUrl: null,
-      suggestedPath: "../assets/wada/figures/03-spectral-parameterization.webp"
-    },
-    {
-      id: "topography",
-      title: "Hemispheric topography",
-      availability: "Pending scientific review",
-      interpretation: "[INSERT LOCKED INTERPRETATION OF THE APPROVED SPATIAL PATTERN]",
-      caption: "[INSERT FINAL REVIEWED FIGURE CAPTION]",
-      methodsNote: "The aggregate topography remains under scientific review and is not packaged for public release.",
-      image: null,
-      width: null,
-      height: null,
-      aspectRatio: "4 / 3",
-      alt: "[INSERT DESCRIPTIVE ALT TEXT FOR THE APPROVED TOPOGRAPHY]",
-      fullResolutionUrl: null,
-      suggestedPath: "../assets/wada/figures/04-hemispheric-topography.webp"
-    },
-    {
-      id: "group-summary",
-      title: "Group-level summary",
-      availability: "Pending scientific review",
-      interpretation: "[INSERT LOCKED GROUP-LEVEL INTERPRETATION]",
-      caption: "[INSERT FINAL CAPTION, APPROVED SAMPLE SIZE, AND STATISTICAL ANNOTATION KEY]",
-      methodsNote: "Group and statistical figures remain under scientific review and are not packaged for public release.",
+      id: "bipolar-summary",
+      title: "Exponent and theta interaction summary",
+      availability: "Participant-level display not approved",
+      interpretation: "The available analysis export contains individual derived points and trajectories, so it is not being displayed publicly.",
+      caption: "An aggregate-only replacement will be added if it passes scientific and privacy review.",
+      methodsNote: "The numerical summaries are reported in the results cards; the existing visual remains private pending review or replacement.",
       image: null,
       width: null,
       height: null,
       aspectRatio: "16 / 10",
-      alt: "[INSERT DESCRIPTIVE ALT TEXT FOR THE APPROVED GROUP SUMMARY]",
+      alt: "Placeholder for an aggregate summary of bipolar aperiodic exponent and theta interactions.",
       fullResolutionUrl: null,
-      suggestedPath: "../assets/wada/figures/05-group-summary.webp"
+      suggestedPath: "../assets/wada/figures/02-bipolar-results.webp"
+    },
+    {
+      id: "detectability",
+      title: "Spectral-feature availability",
+      availability: "Review pending",
+      interpretation: "A candidate aggregate chart contrasts complete aperiodic fits with less frequent detection of oscillatory peaks.",
+      caption: "A reviewed aggregate count figure will be added after approval.",
+      methodsNote: "Feature availability is descriptive and should not be interpreted as accuracy, validity, or diagnostic performance.",
+      image: null,
+      width: null,
+      height: null,
+      aspectRatio: "4 / 3",
+      alt: "Placeholder for aggregate counts of available exponent fits and detected oscillatory peaks.",
+      fullResolutionUrl: null,
+      suggestedPath: "../assets/wada/figures/03-feature-availability.webp"
+    },
+    {
+      id: "topography",
+      title: "CSD topographies",
+      availability: "Visualization only / not approved for public display",
+      interpretation: "CSD is retained here only for candidate spatial topographies; no CSD numerical or inferential result is reported on this page.",
+      caption: "Only scientifically and privacy-reviewed aggregate topographies will be displayed.",
+      methodsNote: "The current poster topographies are participant-level and remain private. Any future public panel must be clearly labeled as a CSD-derived visualization.",
+      image: null,
+      width: null,
+      height: null,
+      aspectRatio: "4 / 3",
+      alt: "Placeholder for reviewed aggregate CSD scalp topographies used only for spatial visualization.",
+      fullResolutionUrl: null,
+      suggestedPath: "../assets/wada/figures/04-csd-topographies.webp"
     }
   ],
 
   results: [
     {
-      label: "Primary candidate measure",
-      title: "Aperiodic exponent",
-      statement: "[INSERT LOCKED RESULT]",
-      metric: "[INSERT EFFECT SIZE] · [INSERT SAMPLE SIZE] · [INSERT TEST STATISTIC AND P-VALUE] · [INSERT 95% INTERVAL]",
-      analysisPlan: "Locked plan: one-sided participant-level Monte Carlo sign-flip test of the studentized mean Tier-1 CSD exponent interaction; no numerical inference result is released.",
-      interpretation: "[INSERT APPROVED INJECTED-VERSUS-CONTRALATERAL INTERPRETATION]",
-      caution: "Do not describe the exponent as superior to oscillatory measures, call it a validated biomarker, or call the contralateral hemisphere untreated."
+      label: "Primary analysis · standard bipolar",
+      title: "Aperiodic exponent showed an injected-side interaction",
+      statement: "After anesthesia, the aperiodic exponent increased more on the injected side than on the contralateral side in the standard-bipolar analysis.",
+      metric: "N=27 · mean interaction=0.245 · 95% CI 0.043–0.447 · t(26)=2.49 · raw two-sided p=.019",
+      analysisPlan: "The primary result is a two-sided paired t test of the injected-minus-contralateral interaction; the displayed p-value is raw and no standardized effect size is available in the saved aggregate result.",
+      interpretation: "The primary bipolar analysis supports a positive lateralized exponent change.",
+      caution: "This result does not by itself establish a validated clinical biomarker or causal mechanism."
     },
     {
       label: "Oscillatory comparison",
-      title: "Oscillatory activity",
-      statement: "[INSERT LOCKED THETA, ALPHA, RESTRICTED-DELTA, OR OTHER APPROVED RESULT]",
-      metric: "[INSERT EFFECT SIZE] · [INSERT SAMPLE SIZE] · [INSERT STATISTICAL TEST] · [INSERT UNCERTAINTY]",
-      analysisPlan: "[INSERT APPROVED OSCILLATORY ENDPOINT AND CORRECTION PLAN; SCHEMA-V3 AND EXPLORATORY SCHEMA-V4 CURRENTLY CONFLICT]",
-      interpretation: "[INSERT INTERPRETATION SUPPORTED BY THE APPROVED COMPARISONS]",
-      caution: "Theta peak absence is encoded as zero only in the schema-v3 peak-power endpoint; restricted 2–4 Hz delta is not equivalent to a decomposed oscillation."
+      title: "Theta did not show the same interaction",
+      statement: "Theta peak strength changed little on either side and did not show evidence of an injected-versus-contralateral difference.",
+      metric: "N=27 · mean interaction=−0.0042 · raw two-sided p=.852 · confidence interval not available",
+      analysisPlan: "Theta was evaluated as a comparison endpoint using the same injected-minus-contralateral logic; its saved aggregate result does not include a confidence interval.",
+      interpretation: "The current cohort does not provide statistical evidence for a theta peak-strength interaction.",
+      caution: "An injected-side theta peak was detected in only 6 of 27 participants, and nondetection is encoded as zero."
     },
     {
-      label: "Within-brain contrast",
-      title: "Spatial specificity and consistency",
-      statement: "[INSERT LOCKED INJECTED-VERSUS-CONTRALATERAL AND GROUP-LEVEL RESULT]",
-      metric: "[INSERT EFFECT SIZE] · [INSERT COMPLETE-CASE SAMPLE SIZE] · [INSERT CORRECTED P-VALUE] · [INSERT UNCERTAINTY]",
-      analysisPlan: "Locked secondary method: a two-sided dependent-samples cluster max-sum test of homologous-site hemisphere-by-condition interactions at ten injection-aligned scalp locations; the final correction plan remains unresolved.",
-      interpretation: "[INSERT APPROVED SPATIAL-SPECIFICITY INTERPRETATION]",
-      caution: "Group plots are descriptive unless tied to the approved inferential analysis; apparent spatial patterns do not establish significance."
+      label: "Descriptive broadband feature",
+      title: "Aperiodic offset showed a positive direction",
+      statement: "The bipolar aperiodic offset had a positive average injected-minus-contralateral interaction, but it was not tested inferentially.",
+      metric: "N=27 · mean interaction=0.721 · SD=0.478 · 26 positive / 1 negative · no inferential p-value",
+      analysisPlan: "Offset was summarized descriptively; no current hypothesis test, confidence interval, or multiplicity correction is available.",
+      interpretation: "The direction is notable as a descriptive broadband-power pattern, not as confirmed statistical evidence.",
+      caution: "Offset is scale- and broadband-power-sensitive and cannot be assigned a movement-specific mechanism from this analysis."
+    },
+    {
+      label: "Descriptive signal availability",
+      title: "Exponent estimates were more consistently available",
+      statement: "An exponent estimate was returned for every fitted participant, while an injected-side theta peak was detected much less often.",
+      metric: "N=27 · exponent fits=27/27 · injected-side theta detected=6/27 · descriptive only",
+      analysisPlan: "Detectability was summarized as an availability measure and was not an inferential endpoint.",
+      interpretation: "The fitted exponent yields a continuous estimate more often than the peak-detection rule identifies theta.",
+      caution: "Availability is not accuracy, validity, diagnostic performance, or proof that one feature is biologically superior."
     }
-  ],
-
-  limitations: [
-    "Methods are implemented and versioned, but the public poster, numerical results, and conclusions remain pending scientific review.",
-    "The contralateral hemisphere is a simultaneous differential comparison, not an untreated control; unilateral injection may still have bilateral spectral effects.",
-    "Movement, muscle activity, shivering, arousal, and behavioral testing can contaminate post-injection EEG and create bilateral broadband changes.",
-    "Hardware low-pass heterogeneity requires separate 2–35 Hz and 2–25 Hz fit tiers and prevents an absolute excitation/inhibition interpretation.",
-    "Spectral parameterization depends on model fit; fit quality and edge cases require explicit diagnostic review.",
-    "Clinical conditions and recording contexts may be heterogeneous across participants.",
-    "A candidate marker is not a validated biomarker and no formal superiority claim is currently supported.",
-    "Replication and an independently reviewed validation sample are required before clinical interpretation."
   ],
 
   resources: [
     {
       id: "poster",
       label: "Download Full Poster",
-      description: "A publication-safe final poster PDF has not yet been approved.",
+      description: "The current poster contains participant-level clinical material and is not approved for public release.",
       href: null,
       available: false,
       download: true,
@@ -276,7 +254,7 @@ window.WADA_CONTENT = {
     {
       id: "abstract",
       label: "Read Abstract",
-      description: "No final abstract has been approved for public release.",
+      description: "The available abstract is a draft and contains language that requires scientific revision.",
       href: null,
       available: false,
       download: false,
@@ -294,7 +272,7 @@ window.WADA_CONTENT = {
     {
       id: "figures",
       label: "View Selected Figures",
-      description: "No figure has passed final scientific, privacy, and licensing review.",
+      description: "Candidate figures remain under scientific, privacy, and licensing review.",
       href: null,
       available: false,
       download: false,
@@ -303,7 +281,7 @@ window.WADA_CONTENT = {
     {
       id: "code",
       label: "View Code",
-      description: "No project repository has been approved for public linking.",
+      description: "Repository visibility, licensing, and public-release approval have not been established.",
       href: null,
       available: false,
       download: false,
@@ -312,7 +290,7 @@ window.WADA_CONTENT = {
     {
       id: "contact",
       label: "Contact Luis",
-      description: "Ask a question or discuss the methods and project status.",
+      description: "Ask a question about the methods, primary findings, or project status.",
       href: "mailto:luis.cabuto@yale.edu?subject=Wada%20EEG%20project",
       available: true,
       download: false,
@@ -321,8 +299,8 @@ window.WADA_CONTENT = {
   ],
 
   attribution: {
-    collaborators: "Janna Helfrich, MD — poster coauthor; [INSERT COAUTHOR AFFILIATION]",
-    lab: "Randolph Helfrich Lab",
-    citation: "Luis D. Cabuto-Gomez; Janna Helfrich, MD. [INSERT APPROVED TITLE]. [INSERT MEETING, SESSION, EXACT DATE, CITY, AND VENUE]."
+    primary: "Conducted in Janna Helfrich, MD’s research group at Yale School of Medicine, with Janna Helfrich, MD as primary mentor.",
+    supporting: "Randolph Helfrich, MD, PhD and the Randolph Helfrich Lab provided substantial collaborating and technical support.",
+    citation: "Luis D. Cabuto-Gomez and Janna Helfrich, MD. “Half Awake: A Within-Brain Comparison of Aperiodic and Oscillatory EEG During Unilateral Methohexital Anesthesia.” REVU Summer Research Program 2026, Yale University."
   }
 };

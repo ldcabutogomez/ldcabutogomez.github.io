@@ -78,14 +78,16 @@
   line-height: 1.5;
 }
 
-.wada-poster-title-status {
+.wada-poster-title {
   display: inline-block;
-  padding: 0.38rem 0.55rem;
+  max-width: 55rem;
+  padding-left: 0.75rem;
   margin: 0 0 0.85rem;
-  border: 1px dashed rgba(240, 198, 120, 0.55);
-  background: rgba(240, 198, 120, 0.06);
+  border-left: 2px solid var(--blue);
+  color: var(--blue);
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: clamp(0.72rem, 2vw, 0.88rem);
+  line-height: 1.55;
   letter-spacing: 0.04em;
 }
 
@@ -480,6 +482,7 @@
   margin: 1rem 0;
   border: 1px dashed rgba(240, 198, 120, 0.45);
   background: rgba(240, 198, 120, 0.05);
+  color: var(--green);
   font-family: var(--mono);
   font-size: 0.7rem;
   line-height: 1.55;
@@ -507,32 +510,6 @@
 
 .result-caution strong {
   color: var(--text);
-}
-
-.limitation-list {
-  display: grid;
-  gap: 0;
-  padding: 0;
-  margin: 0;
-  border-top: 1px solid var(--border-blue);
-  list-style: none;
-}
-
-.limitation-list li {
-  position: relative;
-  padding: 1rem 0 1rem 2rem;
-  border-bottom: 1px solid var(--border-subtle);
-  color: var(--muted);
-}
-
-.limitation-list li::before {
-  position: absolute;
-  top: 1rem;
-  left: 0;
-  color: var(--blue);
-  content: "[!]";
-  font-family: var(--mono);
-  font-size: 0.72rem;
 }
 
 .resource-card {
@@ -660,7 +637,7 @@
   }
 
   .result-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .wada-footer-inner {

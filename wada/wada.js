@@ -66,9 +66,9 @@
   const identityItems = [
     ["Affiliation", content.identity.affiliation],
     ["Program", content.identity.program],
-    ["Lab", content.identity.lab],
-    ["Collaborators", content.identity.collaborators],
-    ["Poster session", content.identity.posterSession]
+    ["Primary mentor", content.identity.primaryMentor],
+    ["Research group", content.identity.researchGroup],
+    ["Supporting lab", content.identity.supportingLab]
   ];
   const identityList = document.querySelector("#identity-list");
   identityItems.forEach(([term, description]) => {
@@ -146,12 +146,15 @@
       element("p", "card-kicker", `Figure ${String(index + 1).padStart(2, "0")}`),
       element("h3", "", figure.title),
       element("p", "figure-availability", figure.availability),
-      element("p", "figure-interpretation placeholder-aware", figure.interpretation),
+      element("p", figure.interpretation.includes("[") ? "figure-interpretation placeholder-aware" : "figure-interpretation", figure.interpretation),
       figureElement
     );
 
     const notes = element("div", "figure-notes");
-    notes.append(element("span", "", "Methods note"), element("p", "placeholder-aware", figure.methodsNote));
+    notes.append(
+      element("span", "", "Methods note"),
+      element("p", figure.methodsNote.includes("[") ? "placeholder-aware" : "", figure.methodsNote)
+    );
 
     if (figure.fullResolutionUrl) {
       const fullLink = element("a", "text-link", "Open full-resolution figure");
@@ -171,15 +174,15 @@
 
   const createResultCard = (result) => {
     const article = element("article", "result-card");
-    const metric = element("p", "result-metric placeholder-text", result.metric);
-    metric.setAttribute("aria-label", `Supporting metric placeholder: ${result.metric}`);
+    const metric = element("p", "result-metric", result.metric);
+    metric.setAttribute("aria-label", `Supporting metrics: ${result.metric}`);
     article.append(
       element("p", "card-kicker", result.label),
       element("h3", "", result.title),
-      element("p", "result-statement placeholder-text", result.statement),
+      element("p", "result-statement", result.statement),
       metric,
       element("p", result.analysisPlan.includes("[") ? "result-plan placeholder-aware" : "result-plan", result.analysisPlan),
-      element("p", "result-interpretation placeholder-aware", result.interpretation)
+      element("p", result.interpretation.includes("[") ? "result-interpretation placeholder-aware" : "result-interpretation", result.interpretation)
     );
     const caution = element("p", "result-caution");
     caution.append(element("strong", "", "Caution: "), result.caution);
@@ -189,9 +192,6 @@
 
   const resultGrid = document.querySelector("#result-grid");
   content.results.forEach((result) => resultGrid.append(createResultCard(result)));
-
-  const limitationList = document.querySelector("#limitation-list");
-  content.limitations.forEach((limitation) => limitationList.append(element("li", "", limitation)));
 
   const resourceGrid = document.querySelector("#resource-grid");
   content.resources.forEach((resource) => {
