@@ -60,7 +60,7 @@ const blocks = {
   }, null, 4).replaceAll("<", "\\u003c"),
   HERO_ACTIONS: [
     renderAction(poster, { label: "View Full Poster", primary: true }),
-    renderAction({ label: "Explore the Analysis", href: "#analysis", available: true }, { primary: true }),
+    renderAction({ label: "Explore the Analysis", href: "#findings", available: true }, { primary: true }),
     renderAction({ label: "Contact Luis", href: contactHref, available: true })
   ].map((item) => `          ${item}`).join("\n"),
   IDENTITY: [
@@ -73,22 +73,13 @@ const blocks = {
   LOGIC: content.scientificLogic.map((step, index) => `        <li class="logic-step">\n          <span class="logic-number">${String(index + 1).padStart(2, "0")}</span>\n          <h3>${escapeHtml(step.title)}</h3>\n          <p>${escapeHtml(step.description)}</p>\n        </li>`).join("\n"),
   QUESTIONS: content.researchQuestion.points.map((point) => `        <article class="question-card">\n          <h3>${escapeHtml(point.title)}</h3>\n          <p>${escapeHtml(point.text)}</p>\n        </article>`).join("\n"),
   METHODS: content.methods.map((method) => `        <article class="method-card">\n          <p class="card-kicker">${escapeHtml(method.label)}</p>\n          <h3>${escapeHtml(method.title)}</h3>\n          <p${method.summary.includes("[") ? ' class="placeholder-aware"' : ""}>${escapeHtml(method.summary)}</p>\n        </article>`).join("\n"),
-  FIGURES: content.figures.map((figure, index) => {
-    const media = figure.image
-      ? `<img src="${escapeHtml(figure.image)}" alt="${escapeHtml(figure.alt)}" loading="lazy" decoding="async"${figure.width && figure.height ? ` width="${Number(figure.width)}" height="${Number(figure.height)}"` : ""}>`
-      : `<div class="figure-placeholder" role="img" aria-label="${escapeHtml(`${figure.title} figure placeholder; ${figure.availability || "final scientific figure not yet available"}.`)}">\n              <span class="figure-placeholder-index">FIG ${String(index + 1).padStart(2, "0")}</span>\n              <span class="figure-placeholder-title">${escapeHtml(figure.availability || "Scientific figure forthcoming")}</span>\n              <code class="figure-placeholder-path">${escapeHtml(figure.suggestedPath)}</code>\n            </div>`;
-    const fullLink = figure.fullResolutionUrl
-      ? `\n          <a class="text-link" href="${escapeHtml(figure.fullResolutionUrl)}" target="_blank" rel="noopener">Open full-resolution figure${externalHint}</a>`
-      : "";
-    return `        <article class="figure-card">\n          <div class="figure-card-body">\n            <p class="card-kicker">Figure ${String(index + 1).padStart(2, "0")}</p>\n            <h3>${escapeHtml(figure.title)}</h3>\n            <p class="figure-availability">${escapeHtml(figure.availability)}</p>\n            <p class="figure-interpretation${figure.interpretation.includes("[") ? " placeholder-aware" : ""}">${escapeHtml(figure.interpretation)}</p>\n            <figure>\n              <div class="figure-media" style="aspect-ratio: ${escapeHtml(figure.aspectRatio || "4 / 3")}">\n                ${media}\n              </div>\n              <figcaption>${escapeHtml(figure.caption)}</figcaption>\n            </figure>\n          </div>\n          <div class="figure-notes">\n            <span>Methods note</span>\n            <p${figure.methodsNote.includes("[") ? ' class="placeholder-aware"' : ""}>${escapeHtml(figure.methodsNote)}</p>${fullLink}\n          </div>\n        </article>`;
-  }).join("\n"),
+  FIGURES: content.figures.map((figure) => `            <li>\n              <div>\n                <h4>${escapeHtml(figure.title)}</h4>\n                <p>${escapeHtml(figure.interpretation)}</p>\n              </div>\n              <span>${escapeHtml(figure.availability)}</span>\n            </li>`).join("\n"),
   RESULTS: content.results.map((result) => `        <article class="result-card">\n          <p class="card-kicker">${escapeHtml(result.label)}</p>\n          <h3>${escapeHtml(result.title)}</h3>\n          <p class="result-statement">${escapeHtml(result.statement)}</p>\n          <p class="result-metric" aria-label="${escapeHtml(`Supporting metrics: ${result.metric}`)}">${escapeHtml(result.metric)}</p>\n          <p class="result-plan${result.analysisPlan.includes("[") ? " placeholder-aware" : ""}">${escapeHtml(result.analysisPlan)}</p>\n          <p class="result-interpretation${result.interpretation.includes("[") ? " placeholder-aware" : ""}">${escapeHtml(result.interpretation)}</p>\n          <p class="result-caution"><strong>Caution: </strong>${escapeHtml(result.caution)}</p>\n        </article>`).join("\n"),
   RESOURCES: content.resources.map((resource) => {
-    const tag = resource.available ? "a" : "div";
-    const attributes = resource.available
-      ? ` ${renderLinkAttributes(resource)}`
-      : ` aria-label="${escapeHtml(`${resource.label}, coming soon`)}"`;
-    return `        <${tag} class="resource-card ${resource.available ? "is-available" : "is-unavailable"}"${attributes}>\n          <h3>${escapeHtml(resource.label)}</h3>\n          <p>${escapeHtml(resource.description)}</p>\n          <span class="resource-status">${resource.available ? "Available →" : "Coming soon"}</span>\n        </${tag}>`;
+    const label = resource.available
+      ? `<a ${renderLinkAttributes(resource)}>${escapeHtml(resource.label)}${resource.external ? externalHint : ""}</a>`
+      : escapeHtml(resource.label);
+    return `            <li>\n              <div>\n                <h4>${label}</h4>\n                <p>${escapeHtml(resource.description)}</p>\n              </div>\n              <span>${resource.available ? "Available" : "Coming soon"}</span>\n            </li>`;
   }).join("\n"),
   CONTACT_LINKS: [
     { label: "Email Luis", href: contactHref },

@@ -55,10 +55,10 @@
 
       <div class="nav-menu" id="nav-menu">
         <a class="wada-back-link" href="../">← Portfolio</a>
-        <a href="#overview">Overview</a>
-        <a href="#methods">Methods</a>
-        <a href="#results">Results</a>
-        <a href="#resources">Resources</a>
+        <a href="#question">Question</a>
+        <a href="#design">Design</a>
+        <a href="#findings">Findings</a>
+        <a href="#status">Status</a>
       </div>
     </nav>
   </header>
@@ -77,6 +77,23 @@
         <p class="wada-short-url"><span aria-hidden="true">↳</span> <span>{{SHORT_URL}}</span></p>
       </div>
 
+      <div class="hero-snapshot">
+        <div class="takeaway-card">
+          <p class="card-kicker">Primary result</p>
+          <h2 id="takeaway-title">The result, at a glance</h2>
+          <p class="takeaway-statement">{{TAKEAWAY_STATEMENT}}</p>
+          <p class="takeaway-note">{{TAKEAWAY_NOTE}}</p>
+        </div>
+        <div class="schematic-shell" aria-labelledby="schematic-title">
+          <p class="card-kicker">Study design</p>
+          <h2 id="schematic-title">One injection, two simultaneous signals</h2>
+          <div class="schematic-stage-placeholder" role="img" aria-label="Design schematic pending Stage 4">
+            <span>Design schematic</span>
+            <small>Injection · injected hemisphere · contralateral hemisphere · peak · recovery</small>
+          </div>
+        </div>
+      </div>
+
       <aside class="wada-identity" aria-labelledby="project-team-title">
         <p class="card-kicker">Project team</p>
         <h2 id="project-team-title">{{AUTHOR}}</h2>
@@ -86,23 +103,12 @@
       </aside>
     </header>
 
-    <section class="wada-section shell" id="overview" aria-labelledby="takeaway-title" data-nav-section>
-      <div class="takeaway-card">
-        <p class="section-index">01 / Main takeaway</p>
-        <h2 id="takeaway-title">The result, at a glance</h2>
-        <p class="takeaway-statement">{{TAKEAWAY_STATEMENT}}</p>
-        <p class="takeaway-note">{{TAKEAWAY_NOTE}}</p>
-      </div>
-    </section>
-
-    <section class="wada-section shell" aria-labelledby="logic-title">
-      <div class="wada-section-heading">
-        <div>
-          <p class="section-index">02 / Scientific logic</p>
-          <h2 id="logic-title">One perturbation, two hemispheres</h2>
-        </div>
+    <section class="wada-section shell" id="question" aria-labelledby="logic-title" data-nav-section>
+      <header class="question-intro">
+        <p class="card-kicker">The question</p>
+        <h2 id="logic-title">One perturbation, two hemispheres</h2>
         <p>A concise map from the clinical procedure to the analysis contrast.</p>
-      </div>
+      </header>
       <ol class="logic-flow" id="logic-flow">
 <!-- WADA:LOGIC -->
       </ol>
@@ -111,14 +117,8 @@
         <h3 id="within-brain-title">Each participant provides a simultaneous comparison</h3>
         <p>{{WITHIN_BRAIN_DESIGN}}</p>
       </aside>
-    </section>
-
-    <section class="wada-section shell" aria-labelledby="question-title">
-      <div class="wada-section-heading">
-        <div>
-          <p class="section-index">03 / Research question</p>
-          <h2 id="question-title">What signal is spatially specific?</h2>
-        </div>
+      <div class="question-detail-heading">
+        <h3 id="question-title">What signal is spatially specific?</h3>
         <p>{{RESEARCH_INTRODUCTION}}</p>
       </div>
       <div class="question-grid" id="question-grid">
@@ -126,10 +126,10 @@
       </div>
     </section>
 
-    <section class="wada-section shell" id="methods" aria-labelledby="methods-title" data-nav-section>
+    <section class="wada-section shell design-section" id="design" aria-labelledby="methods-title" data-nav-section>
       <div class="wada-section-heading">
         <div>
-          <p class="section-index">04 / Key methods</p>
+          <p class="section-index">01 / Design</p>
           <h2 id="methods-title">From clinical EEG to a within-brain contrast</h2>
         </div>
         <p>The current pipeline centers the predefined standard-bipolar montage and a paired, within-participant interaction.</p>
@@ -139,50 +139,45 @@
       </div>
     </section>
 
-    <section class="wada-section shell" id="analysis" aria-labelledby="figures-title">
-      <div class="wada-section-heading">
-        <div>
-          <p class="section-index">05 / Featured figures</p>
-          <h2 id="figures-title">Explore the analysis</h2>
-        </div>
-        <p>Candidate figures remain private until scientific, privacy, and licensing review is complete; CSD is retained only for candidate topographic visualization.</p>
-      </div>
-      <div class="figure-grid" id="figures">
-<!-- WADA:FIGURES -->
-      </div>
-    </section>
-
-    <section class="wada-section shell" id="results" aria-labelledby="results-title" data-nav-section>
-      <div class="wada-section-heading">
-        <div>
-          <p class="section-index">06 / Results summary</p>
-          <h2 id="results-title">Primary bipolar findings</h2>
-        </div>
+    <section class="wada-section shell findings-section" id="findings" aria-labelledby="results-title" data-nav-section>
+      <header class="findings-heading">
+        <p class="section-index">02 / Findings</p>
+        <h2 id="results-title">Primary bipolar findings</h2>
         <p>Aggregate results distinguish the primary exponent interaction from oscillatory and descriptive comparison measures.</p>
-      </div>
+      </header>
       <div class="result-grid" id="result-grid">
 <!-- WADA:RESULTS -->
       </div>
     </section>
 
-    <section class="wada-section shell" id="resources" aria-labelledby="resources-title" data-nav-section>
-      <div class="wada-section-heading">
-        <div>
-          <p class="section-index">07 / Resources</p>
-          <h2 id="resources-title">Continue exploring</h2>
-        </div>
-        <p>Downloads remain unavailable until each resource passes its required scientific, privacy, and licensing review.</p>
+    <section class="wada-section shell status-section" id="status" aria-labelledby="status-title" data-nav-section>
+      <div class="status-heading">
+        <p class="card-kicker">Status and contact</p>
+        <h2 id="status-title">What is available now</h2>
       </div>
-      <div class="resource-grid" id="resource-grid">
-<!-- WADA:RESOURCES -->
-      </div>
-    </section>
 
-    <section class="wada-section shell" aria-labelledby="contact-title">
+      <div class="status-grid">
+        <div class="status-block" aria-labelledby="figures-title">
+          <h3 id="figures-title">Explore the analysis</h3>
+          <p>Candidate figures remain private until scientific, privacy, and licensing review is complete; CSD is retained only for candidate topographic visualization.</p>
+          <ul class="status-list" id="figures">
+<!-- WADA:FIGURES -->
+          </ul>
+        </div>
+
+        <div class="status-block" aria-labelledby="resources-title">
+          <h3 id="resources-title">Continue exploring</h3>
+          <p>Downloads remain unavailable until each resource passes its required scientific, privacy, and licensing review.</p>
+          <ul class="status-list" id="resource-grid">
+<!-- WADA:RESOURCES -->
+          </ul>
+        </div>
+      </div>
+
       <div class="contact-panel">
         <div>
-          <p class="section-index">08 / Contact &amp; attribution</p>
-          <h2 id="contact-title">Questions are welcome</h2>
+          <p class="card-kicker">Contact</p>
+          <h3 id="contact-title">Questions are welcome</h3>
           <p>For questions about the methods, project status, or future poster release, contact {{AUTHOR}} at {{AFFILIATION}}.</p>
           <div class="contact-links" id="contact-links">
 <!-- WADA:CONTACT_LINKS -->

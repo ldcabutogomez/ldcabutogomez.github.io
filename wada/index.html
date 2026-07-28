@@ -77,10 +77,10 @@
 
       <div class="nav-menu" id="nav-menu">
         <a class="wada-back-link" href="../">← Portfolio</a>
-        <a href="#overview">Overview</a>
-        <a href="#methods">Methods</a>
-        <a href="#results">Results</a>
-        <a href="#resources">Resources</a>
+        <a href="#question">Question</a>
+        <a href="#design">Design</a>
+        <a href="#findings">Findings</a>
+        <a href="#status">Status</a>
       </div>
     </nav>
   </header>
@@ -95,10 +95,27 @@
 
         <div class="wada-actions" id="hero-actions" aria-label="Project actions">
           <span class="button button-primary button-unavailable" aria-disabled="true">View Full Poster<span class="button-status">Coming soon</span></span>
-          <a class="button button-primary" href="#analysis">Explore the Analysis</a>
+          <a class="button button-primary" href="#findings">Explore the Analysis</a>
           <a class="button" href="mailto:luis.cabuto@yale.edu?subject=Wada%20EEG%20project">Contact Luis</a>
         </div>
         <p class="wada-short-url"><span aria-hidden="true">↳</span> <span>ldcabutogomez.github.io/wada/</span></p>
+      </div>
+
+      <div class="hero-snapshot">
+        <div class="takeaway-card">
+          <p class="card-kicker">Primary result</p>
+          <h2 id="takeaway-title">The result, at a glance</h2>
+          <p class="takeaway-statement">In a frozen cohort of 27 participants, the standard-bipolar aperiodic exponent showed a positive injected-minus-contralateral interaction.</p>
+          <p class="takeaway-note">The mean interaction was 0.245 exponent units (95% CI 0.043–0.447; raw two-sided p=.019) in the primary standard-bipolar analysis.</p>
+        </div>
+        <div class="schematic-shell" aria-labelledby="schematic-title">
+          <p class="card-kicker">Study design</p>
+          <h2 id="schematic-title">One injection, two simultaneous signals</h2>
+          <div class="schematic-stage-placeholder" role="img" aria-label="Design schematic pending Stage 4">
+            <span>Design schematic</span>
+            <small>Injection · injected hemisphere · contralateral hemisphere · peak · recovery</small>
+          </div>
+        </div>
       </div>
 
       <aside class="wada-identity" aria-labelledby="project-team-title">
@@ -129,23 +146,12 @@
       </aside>
     </header>
 
-    <section class="wada-section shell" id="overview" aria-labelledby="takeaway-title" data-nav-section>
-      <div class="takeaway-card">
-        <p class="section-index">01 / Main takeaway</p>
-        <h2 id="takeaway-title">The result, at a glance</h2>
-        <p class="takeaway-statement">In a frozen cohort of 27 participants, the standard-bipolar aperiodic exponent showed a positive injected-minus-contralateral interaction.</p>
-        <p class="takeaway-note">The mean interaction was 0.245 exponent units (95% CI 0.043–0.447; raw two-sided p=.019) in the primary standard-bipolar analysis.</p>
-      </div>
-    </section>
-
-    <section class="wada-section shell" aria-labelledby="logic-title">
-      <div class="wada-section-heading">
-        <div>
-          <p class="section-index">02 / Scientific logic</p>
-          <h2 id="logic-title">One perturbation, two hemispheres</h2>
-        </div>
+    <section class="wada-section shell" id="question" aria-labelledby="logic-title" data-nav-section>
+      <header class="question-intro">
+        <p class="card-kicker">The question</p>
+        <h2 id="logic-title">One perturbation, two hemispheres</h2>
         <p>A concise map from the clinical procedure to the analysis contrast.</p>
-      </div>
+      </header>
       <ol class="logic-flow" id="logic-flow">
         <li class="logic-step">
           <span class="logic-number">01</span>
@@ -178,14 +184,8 @@
         <h3 id="within-brain-title">Each participant provides a simultaneous comparison</h3>
         <p>Each participant contributes baseline and anesthesia measurements from both hemispheres. The principal interaction is [(anesthesia − baseline) injected] − [(anesthesia − baseline) contralateral]. The contralateral hemisphere is a simultaneous within-participant comparator, not an untreated or unaffected control.</p>
       </aside>
-    </section>
-
-    <section class="wada-section shell" aria-labelledby="question-title">
-      <div class="wada-section-heading">
-        <div>
-          <p class="section-index">03 / Research question</p>
-          <h2 id="question-title">What signal is spatially specific?</h2>
-        </div>
+      <div class="question-detail-heading">
+        <h3 id="question-title">What signal is spatially specific?</h3>
         <p>Does the aperiodic EEG exponent change more after unilateral methohexital administration in the injected hemisphere than in the contralateral hemisphere, and does oscillatory theta peak strength show the same pattern?</p>
       </div>
       <div class="question-grid" id="question-grid">
@@ -208,10 +208,10 @@
       </div>
     </section>
 
-    <section class="wada-section shell" id="methods" aria-labelledby="methods-title" data-nav-section>
+    <section class="wada-section shell design-section" id="design" aria-labelledby="methods-title" data-nav-section>
       <div class="wada-section-heading">
         <div>
-          <p class="section-index">04 / Key methods</p>
+          <p class="section-index">01 / Design</p>
           <h2 id="methods-title">From clinical EEG to a within-brain contrast</h2>
         </div>
         <p>The current pipeline centers the predefined standard-bipolar montage and a paired, within-participant interaction.</p>
@@ -265,114 +265,12 @@
       </div>
     </section>
 
-    <section class="wada-section shell" id="analysis" aria-labelledby="figures-title">
-      <div class="wada-section-heading">
-        <div>
-          <p class="section-index">05 / Featured figures</p>
-          <h2 id="figures-title">Explore the analysis</h2>
-        </div>
-        <p>Candidate figures remain private until scientific, privacy, and licensing review is complete; CSD is retained only for candidate topographic visualization.</p>
-      </div>
-      <div class="figure-grid" id="figures">
-        <article class="figure-card">
-          <div class="figure-card-body">
-            <p class="card-kicker">Figure 01</p>
-            <h3>Aggregate bipolar spectra</h3>
-            <p class="figure-availability">Scientific and privacy review pending</p>
-            <p class="figure-interpretation">Candidate exports summarize group-level spectra before and during anesthesia for the injected and contralateral hemispheres.</p>
-            <figure>
-              <div class="figure-media" style="aspect-ratio: 4 / 3">
-                <div class="figure-placeholder" role="img" aria-label="Aggregate bipolar spectra figure placeholder; Scientific and privacy review pending.">
-              <span class="figure-placeholder-index">FIG 01</span>
-              <span class="figure-placeholder-title">Scientific and privacy review pending</span>
-              <code class="figure-placeholder-path">../assets/wada/figures/01-bipolar-spectra.webp</code>
-            </div>
-              </div>
-              <figcaption>A reviewed aggregate-only figure will be added after scientific and privacy approval.</figcaption>
-            </figure>
-          </div>
-          <div class="figure-notes">
-            <span>Methods note</span>
-            <p>Current aggregate PSD exports contain no visible participant trajectories, but they have not completed scientific, privacy, or website-use review.</p>
-          </div>
-        </article>
-        <article class="figure-card">
-          <div class="figure-card-body">
-            <p class="card-kicker">Figure 02</p>
-            <h3>Exponent and theta interaction summary</h3>
-            <p class="figure-availability">Participant-level display not approved</p>
-            <p class="figure-interpretation">The available analysis export contains individual derived points and trajectories, so it is not being displayed publicly.</p>
-            <figure>
-              <div class="figure-media" style="aspect-ratio: 16 / 10">
-                <div class="figure-placeholder" role="img" aria-label="Exponent and theta interaction summary figure placeholder; Participant-level display not approved.">
-              <span class="figure-placeholder-index">FIG 02</span>
-              <span class="figure-placeholder-title">Participant-level display not approved</span>
-              <code class="figure-placeholder-path">../assets/wada/figures/02-bipolar-results.webp</code>
-            </div>
-              </div>
-              <figcaption>An aggregate-only replacement will be added if it passes scientific and privacy review.</figcaption>
-            </figure>
-          </div>
-          <div class="figure-notes">
-            <span>Methods note</span>
-            <p>The numerical summaries are reported in the results cards; the existing visual remains private pending review or replacement.</p>
-          </div>
-        </article>
-        <article class="figure-card">
-          <div class="figure-card-body">
-            <p class="card-kicker">Figure 03</p>
-            <h3>Spectral-feature availability</h3>
-            <p class="figure-availability">Review pending</p>
-            <p class="figure-interpretation">A candidate aggregate chart contrasts complete aperiodic fits with less frequent detection of oscillatory peaks.</p>
-            <figure>
-              <div class="figure-media" style="aspect-ratio: 4 / 3">
-                <div class="figure-placeholder" role="img" aria-label="Spectral-feature availability figure placeholder; Review pending.">
-              <span class="figure-placeholder-index">FIG 03</span>
-              <span class="figure-placeholder-title">Review pending</span>
-              <code class="figure-placeholder-path">../assets/wada/figures/03-feature-availability.webp</code>
-            </div>
-              </div>
-              <figcaption>A reviewed aggregate count figure will be added after approval.</figcaption>
-            </figure>
-          </div>
-          <div class="figure-notes">
-            <span>Methods note</span>
-            <p>Feature availability is descriptive and should not be interpreted as accuracy, validity, or diagnostic performance.</p>
-          </div>
-        </article>
-        <article class="figure-card">
-          <div class="figure-card-body">
-            <p class="card-kicker">Figure 04</p>
-            <h3>CSD topographies</h3>
-            <p class="figure-availability">Visualization only / not approved for public display</p>
-            <p class="figure-interpretation">CSD is retained here only for candidate spatial topographies; no CSD numerical or inferential result is reported on this page.</p>
-            <figure>
-              <div class="figure-media" style="aspect-ratio: 4 / 3">
-                <div class="figure-placeholder" role="img" aria-label="CSD topographies figure placeholder; Visualization only / not approved for public display.">
-              <span class="figure-placeholder-index">FIG 04</span>
-              <span class="figure-placeholder-title">Visualization only / not approved for public display</span>
-              <code class="figure-placeholder-path">../assets/wada/figures/04-csd-topographies.webp</code>
-            </div>
-              </div>
-              <figcaption>Only scientifically and privacy-reviewed aggregate topographies will be displayed.</figcaption>
-            </figure>
-          </div>
-          <div class="figure-notes">
-            <span>Methods note</span>
-            <p>The current poster topographies are participant-level and remain private. Any future public panel must be clearly labeled as a CSD-derived visualization.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="wada-section shell" id="results" aria-labelledby="results-title" data-nav-section>
-      <div class="wada-section-heading">
-        <div>
-          <p class="section-index">06 / Results summary</p>
-          <h2 id="results-title">Primary bipolar findings</h2>
-        </div>
+    <section class="wada-section shell findings-section" id="findings" aria-labelledby="results-title" data-nav-section>
+      <header class="findings-heading">
+        <p class="section-index">02 / Findings</p>
+        <h2 id="results-title">Primary bipolar findings</h2>
         <p>Aggregate results distinguish the primary exponent interaction from oscillatory and descriptive comparison measures.</p>
-      </div>
+      </header>
       <div class="result-grid" id="result-grid">
         <article class="result-card">
           <p class="card-kicker">Primary analysis · standard bipolar</p>
@@ -413,53 +311,102 @@
       </div>
     </section>
 
-    <section class="wada-section shell" id="resources" aria-labelledby="resources-title" data-nav-section>
-      <div class="wada-section-heading">
-        <div>
-          <p class="section-index">07 / Resources</p>
-          <h2 id="resources-title">Continue exploring</h2>
-        </div>
-        <p>Downloads remain unavailable until each resource passes its required scientific, privacy, and licensing review.</p>
+    <section class="wada-section shell status-section" id="status" aria-labelledby="status-title" data-nav-section>
+      <div class="status-heading">
+        <p class="card-kicker">Status and contact</p>
+        <h2 id="status-title">What is available now</h2>
       </div>
-      <div class="resource-grid" id="resource-grid">
-        <div class="resource-card is-unavailable" aria-label="Download Full Poster, coming soon">
-          <h3>Download Full Poster</h3>
-          <p>The current poster contains participant-level clinical material and is not approved for public release.</p>
-          <span class="resource-status">Coming soon</span>
-        </div>
-        <div class="resource-card is-unavailable" aria-label="Read Abstract, coming soon">
-          <h3>Read Abstract</h3>
-          <p>The available abstract is a draft and contains language that requires scientific revision.</p>
-          <span class="resource-status">Coming soon</span>
-        </div>
-        <div class="resource-card is-unavailable" aria-label="Methods Supplement, coming soon">
-          <h3>Methods Supplement</h3>
-          <p>No separately approved public methods supplement is available.</p>
-          <span class="resource-status">Coming soon</span>
-        </div>
-        <div class="resource-card is-unavailable" aria-label="View Selected Figures, coming soon">
-          <h3>View Selected Figures</h3>
-          <p>Candidate figures remain under scientific, privacy, and licensing review.</p>
-          <span class="resource-status">Coming soon</span>
-        </div>
-        <div class="resource-card is-unavailable" aria-label="View Code, coming soon">
-          <h3>View Code</h3>
-          <p>Repository visibility, licensing, and public-release approval have not been established.</p>
-          <span class="resource-status">Coming soon</span>
-        </div>
-        <a class="resource-card is-available" href="mailto:luis.cabuto@yale.edu?subject=Wada%20EEG%20project">
-          <h3>Contact Luis</h3>
-          <p>Ask a question about the methods, primary findings, or project status.</p>
-          <span class="resource-status">Available →</span>
-        </a>
-      </div>
-    </section>
 
-    <section class="wada-section shell" aria-labelledby="contact-title">
+      <div class="status-grid">
+        <div class="status-block" aria-labelledby="figures-title">
+          <h3 id="figures-title">Explore the analysis</h3>
+          <p>Candidate figures remain private until scientific, privacy, and licensing review is complete; CSD is retained only for candidate topographic visualization.</p>
+          <ul class="status-list" id="figures">
+            <li>
+              <div>
+                <h4>Aggregate bipolar spectra</h4>
+                <p>Candidate exports summarize group-level spectra before and during anesthesia for the injected and contralateral hemispheres.</p>
+              </div>
+              <span>Scientific and privacy review pending</span>
+            </li>
+            <li>
+              <div>
+                <h4>Exponent and theta interaction summary</h4>
+                <p>The available analysis export contains individual derived points and trajectories, so it is not being displayed publicly.</p>
+              </div>
+              <span>Participant-level display not approved</span>
+            </li>
+            <li>
+              <div>
+                <h4>Spectral-feature availability</h4>
+                <p>A candidate aggregate chart contrasts complete aperiodic fits with less frequent detection of oscillatory peaks.</p>
+              </div>
+              <span>Review pending</span>
+            </li>
+            <li>
+              <div>
+                <h4>CSD topographies</h4>
+                <p>CSD is retained here only for candidate spatial topographies; no CSD numerical or inferential result is reported on this page.</p>
+              </div>
+              <span>Visualization only / not approved for public display</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="status-block" aria-labelledby="resources-title">
+          <h3 id="resources-title">Continue exploring</h3>
+          <p>Downloads remain unavailable until each resource passes its required scientific, privacy, and licensing review.</p>
+          <ul class="status-list" id="resource-grid">
+            <li>
+              <div>
+                <h4>Download Full Poster</h4>
+                <p>The current poster contains participant-level clinical material and is not approved for public release.</p>
+              </div>
+              <span>Coming soon</span>
+            </li>
+            <li>
+              <div>
+                <h4>Read Abstract</h4>
+                <p>The available abstract is a draft and contains language that requires scientific revision.</p>
+              </div>
+              <span>Coming soon</span>
+            </li>
+            <li>
+              <div>
+                <h4>Methods Supplement</h4>
+                <p>No separately approved public methods supplement is available.</p>
+              </div>
+              <span>Coming soon</span>
+            </li>
+            <li>
+              <div>
+                <h4>View Selected Figures</h4>
+                <p>Candidate figures remain under scientific, privacy, and licensing review.</p>
+              </div>
+              <span>Coming soon</span>
+            </li>
+            <li>
+              <div>
+                <h4>View Code</h4>
+                <p>Repository visibility, licensing, and public-release approval have not been established.</p>
+              </div>
+              <span>Coming soon</span>
+            </li>
+            <li>
+              <div>
+                <h4><a href="mailto:luis.cabuto@yale.edu?subject=Wada%20EEG%20project">Contact Luis</a></h4>
+                <p>Ask a question about the methods, primary findings, or project status.</p>
+              </div>
+              <span>Available</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <div class="contact-panel">
         <div>
-          <p class="section-index">08 / Contact &amp; attribution</p>
-          <h2 id="contact-title">Questions are welcome</h2>
+          <p class="card-kicker">Contact</p>
+          <h3 id="contact-title">Questions are welcome</h3>
           <p>For questions about the methods, project status, or future poster release, contact Luis D. Cabuto-Gomez at Yale University.</p>
           <div class="contact-links" id="contact-links">
             <a class="button" href="mailto:luis.cabuto@yale.edu?subject=Wada%20EEG%20project">Email Luis</a>
