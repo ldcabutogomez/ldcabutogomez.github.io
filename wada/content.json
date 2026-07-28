@@ -9,8 +9,8 @@
     "overallStatus": "current primary analysis",
     "methodsStatus": "current implemented bipolar pipeline",
     "resultsStatus": "primary bipolar results updated",
-    "figuresStatus": "no public-ready scientific figures",
-    "privacyAudit": "pending for every proposed asset"
+    "figuresStatus": "final v24 poster panels public",
+    "privacyAudit": "owner confirmed the final poster contains no PHI; only panels embedded in final v24 are published"
   },
   "page": {
     "documentTitle": "Half Awake | Wada EEG Project | Luis D. Cabuto-Gomez",
@@ -34,6 +34,7 @@
     "primaryMentor": "Janna Helfrich, MD — Yale School of Medicine",
     "researchGroup": "Janna Helfrich, MD’s research group",
     "supportingLab": "Randolph Helfrich, MD, PhD / Randolph Helfrich Lab — collaborating and technical support",
+    "roleAttribution": "Luis D. Cabuto-Gomez developed the entire EEG analysis pipeline.",
     "email": "mailto:luis.cabuto@yale.edu",
     "github": "https://github.com/ldcabutogomez",
     "linkedin": "https://www.linkedin.com/in/luis-cabuto/",
@@ -41,7 +42,8 @@
   },
   "takeaway": {
     "statement": "In a locked sample of 27 participants, the standard-bipolar aperiodic exponent showed a positive injected-minus-contralateral interaction.",
-    "note": "The mean interaction was 0.245 exponent units (95% CI 0.043–0.447; raw two-sided p=.019) in the primary standard-bipolar analysis."
+    "note": "The mean interaction was 0.245 exponent units (95% CI 0.043–0.447; raw two-sided p=.019) in the primary standard-bipolar analysis.",
+    "calibration": "Following injection, exponent steepening was consistently greater in the injected hemisphere than in the contralateral hemisphere—a statistically significant difference (raw two-sided p=.019) supporting a localized anesthetic effect rather than a bilateral recording artifact."
   },
   "scientificLogic": [
     {
@@ -101,7 +103,7 @@
     {
       "label": "Quality control",
       "title": "Artifact handling",
-      "summary": "Recordings use either approved manual clean segments or an objective 4-second epoch gate based on robust and absolute peak-to-peak amplitude. Standard conditions require at least 15 accepted epochs; curated conditions require at least 50 seconds."
+      "summary": "Four-second epochs are flagged using robust and absolute peak-to-peak amplitude criteria and then manually reviewed in an additional artifact-review step. Manually curated baseline and anesthesia recordings require at least 50 seconds per condition."
     },
     {
       "label": "Primary montage",
@@ -136,64 +138,154 @@
   ],
   "figures": [
     {
-      "id": "bipolar-psd",
-      "title": "Aggregate bipolar spectra",
-      "availability": "Scientific and privacy review pending",
-      "interpretation": "Candidate exports summarize group-level spectra before and during anesthesia for the injected and contralateral hemispheres.",
-      "caption": "A reviewed aggregate-only figure will be added after scientific and privacy approval.",
-      "methodsNote": "Current aggregate PSD exports contain no visible participant trajectories, but they have not completed scientific, privacy, or website-use review.",
-      "image": null,
-      "width": null,
-      "height": null,
-      "aspectRatio": "4 / 3",
-      "alt": "Placeholder for aggregate bipolar power spectra comparing baseline and anesthesia in both hemispheres.",
-      "fullResolutionUrl": null,
-      "suggestedPath": "../assets/wada/figures/01-bipolar-spectra.webp"
+      "id": "panel-a",
+      "panel": "A",
+      "title": "Raw EEG around injection",
+      "caption": "Single-participant raw EEG traces surrounding methohexital injection.",
+      "layout": "wide",
+      "images": [
+        {
+          "src": "../assets/wada/figures/poster/panel-a-waveform.svg",
+          "width": 969,
+          "height": 322,
+          "alt": "Three raw EEG traces labeled F4, C4, and P4 around injection at time zero, with larger slow activity afterward."
+        }
+      ]
     },
     {
-      "id": "bipolar-summary",
-      "title": "Exponent and theta interaction summary",
-      "availability": "Participant-level display not approved",
-      "interpretation": "The available analysis export contains individual derived points and trajectories, so it is not being displayed publicly.",
-      "caption": "An aggregate-only replacement will be added if it passes scientific and privacy review.",
-      "methodsNote": "The numerical summaries are reported in the results cards; the existing visual remains private pending review or replacement.",
-      "image": null,
-      "width": null,
-      "height": null,
-      "aspectRatio": "16 / 10",
-      "alt": "Placeholder for an aggregate summary of bipolar aperiodic exponent and theta interactions.",
-      "fullResolutionUrl": null,
-      "suggestedPath": "../assets/wada/figures/02-bipolar-results.webp"
+      "id": "panel-b",
+      "panel": "B",
+      "title": "Injected and contralateral spectral fits",
+      "caption": "Single-participant Tier-1 bipolar spectral fits from the injected and contralateral regions.",
+      "layout": "paired",
+      "images": [
+        {
+          "src": "../assets/wada/figures/poster/panel-b-injected-fit.svg",
+          "width": 290,
+          "height": 322,
+          "alt": "Injected-region log-power spectra with baseline and anesthesia fits."
+        },
+        {
+          "src": "../assets/wada/figures/poster/panel-b-contralateral-fit.svg",
+          "width": 290,
+          "height": 322,
+          "alt": "Contralateral-region log-power spectra with baseline and anesthesia fits."
+        }
+      ]
     },
     {
-      "id": "detectability",
-      "title": "Spectral-feature availability",
-      "availability": "Review pending",
-      "interpretation": "A candidate aggregate chart contrasts complete aperiodic fits with less frequent detection of oscillatory peaks.",
-      "caption": "A reviewed aggregate count figure will be added after approval.",
-      "methodsNote": "Feature availability is descriptive and should not be interpreted as accuracy, validity, or diagnostic performance.",
-      "image": null,
-      "width": null,
-      "height": null,
-      "aspectRatio": "4 / 3",
-      "alt": "Placeholder for aggregate counts of available exponent fits and detected oscillatory peaks.",
-      "fullResolutionUrl": null,
-      "suggestedPath": "../assets/wada/figures/03-feature-availability.webp"
+      "id": "panel-c",
+      "panel": "C",
+      "title": "Single-participant peri-injection spectra",
+      "caption": "Time-resolved bipolar multitaper spectra for the injected and contralateral regions in the poster’s single-participant example.",
+      "layout": "wide",
+      "images": [
+        {
+          "src": "../assets/wada/figures/poster/panel-c-subject-multitaper.png",
+          "width": 8071,
+          "height": 4730,
+          "alt": "Two time-frequency heat maps for injected and contralateral regions around injection at time zero."
+        }
+      ]
     },
     {
-      "id": "topography",
-      "title": "CSD topographies",
-      "availability": "Visualization only / not approved for public display",
-      "interpretation": "CSD is retained here only for candidate spatial topographies; no CSD numerical or inferential result is reported on this page.",
-      "caption": "Only scientifically and privacy-reviewed aggregate topographies will be displayed.",
-      "methodsNote": "The current poster topographies are participant-level and remain private. Any future public panel must be clearly labeled as a CSD-derived visualization.",
-      "image": null,
-      "width": null,
-      "height": null,
-      "aspectRatio": "4 / 3",
-      "alt": "Placeholder for reviewed aggregate CSD scalp topographies used only for spatial visualization.",
-      "fullResolutionUrl": null,
-      "suggestedPath": "../assets/wada/figures/04-csd-topographies.webp"
+      "id": "panels-d-e",
+      "panel": "D–E",
+      "title": "Alpha and delta CSD topographies",
+      "caption": "The poster’s CSD scalp topographies provide spatial visualization for alpha and delta power at baseline and during anesthesia; no CSD numerical result is reported here.",
+      "layout": "quad",
+      "images": [
+        {
+          "src": "../assets/wada/figures/poster/panel-d-alpha-baseline.png",
+          "width": 2400,
+          "height": 2255,
+          "alt": "CSD alpha-power scalp topography at baseline."
+        },
+        {
+          "src": "../assets/wada/figures/poster/panel-d-alpha-anesthesia.png",
+          "width": 2400,
+          "height": 2255,
+          "alt": "CSD alpha-power scalp topography during anesthesia."
+        },
+        {
+          "src": "../assets/wada/figures/poster/panel-e-delta-baseline.png",
+          "width": 2400,
+          "height": 2255,
+          "alt": "CSD delta-power scalp topography at baseline."
+        },
+        {
+          "src": "../assets/wada/figures/poster/panel-e-delta-anesthesia.png",
+          "width": 2400,
+          "height": 2255,
+          "alt": "CSD delta-power scalp topography during anesthesia."
+        }
+      ]
+    },
+    {
+      "id": "panel-f",
+      "panel": "F",
+      "title": "Group peri-injection spectra",
+      "caption": "Cohort-level standard-bipolar multitaper spectra aligned to the injected hemisphere (N=27).",
+      "layout": "wide",
+      "images": [
+        {
+          "src": "../assets/wada/figures/poster/panel-f-group-multitaper.png",
+          "width": 8071,
+          "height": 4730,
+          "alt": "Two cohort time-frequency heat maps for injected and contralateral regions around injection at time zero."
+        }
+      ]
+    },
+    {
+      "id": "panel-g",
+      "panel": "G",
+      "title": "Primary-region bipolar spectra",
+      "caption": "Group primary-ROI bipolar spectra for the injected and contralateral hemispheres.",
+      "layout": "paired",
+      "images": [
+        {
+          "src": "../assets/wada/figures/poster/panel-g-injected-psd.svg",
+          "width": 290,
+          "height": 322,
+          "alt": "Group injected-hemisphere log-power spectra at baseline and during anesthesia."
+        },
+        {
+          "src": "../assets/wada/figures/poster/panel-g-contralateral-psd.svg",
+          "width": 290,
+          "height": 322,
+          "alt": "Group contralateral-hemisphere log-power spectra at baseline and during anesthesia."
+        }
+      ]
+    },
+    {
+      "id": "panel-h",
+      "panel": "H",
+      "title": "Primary bipolar exponent and theta results",
+      "caption": "The poster’s paired exponent and theta summary for the N=27 primary standard-bipolar analysis.",
+      "layout": "wide",
+      "images": [
+        {
+          "src": "../assets/wada/figures/poster/panel-h-exponent-theta.svg",
+          "width": 778,
+          "height": 389,
+          "alt": "Paired baseline and anesthesia plots for injected and contralateral aperiodic exponent and theta peak strength."
+        }
+      ]
+    },
+    {
+      "id": "panel-i",
+      "panel": "I",
+      "title": "Bipolar peak detectability",
+      "caption": "Availability of exponent estimates and detected alpha and theta peaks in the poster cohort.",
+      "layout": "standard",
+      "images": [
+        {
+          "src": "../assets/wada/figures/poster/panel-i-peak-detectability.svg",
+          "width": 497,
+          "height": 259,
+          "alt": "Bar chart showing exponent estimates for 27 of 27 participants, alpha peaks for 12 of 27, and theta peaks for 6 of 27."
+        }
+      ]
     }
   ],
   "results": [
@@ -203,8 +295,7 @@
       "statement": "After anesthesia, the aperiodic exponent increased more on the injected side than on the contralateral side in the standard-bipolar analysis.",
       "metric": "N=27 · mean interaction=0.245 · 95% CI 0.043–0.447 · t(26)=2.49 · raw two-sided p=.019",
       "analysisPlan": "The primary result is a two-sided paired t test of the injected-minus-contralateral interaction; the displayed p-value is raw and no standardized effect size is available in the saved aggregate result.",
-      "interpretation": "The primary bipolar analysis supports a positive lateralized exponent change.",
-      "caution": "This result does not by itself establish a validated clinical biomarker or causal mechanism."
+      "interpretation": "The primary bipolar analysis supports a positive lateralized exponent change."
     },
     {
       "label": "Oscillatory comparison",
@@ -218,20 +309,19 @@
     {
       "label": "Descriptive broadband feature",
       "title": "Aperiodic offset showed a positive direction",
-      "statement": "The bipolar aperiodic offset had a positive average injected-minus-contralateral interaction, but it was not tested inferentially.",
+      "statement": "The bipolar aperiodic offset had a positive average injected-minus-contralateral interaction.",
       "metric": "N=27 · mean interaction=0.721 · SD=0.478 · 26 positive / 1 negative · no inferential p-value",
       "analysisPlan": "Offset was summarized descriptively; no current hypothesis test, confidence interval, or multiplicity correction is available.",
-      "interpretation": "The direction is notable as a descriptive broadband-power pattern, not as confirmed statistical evidence.",
-      "caution": "Offset is scale- and broadband-power-sensitive and cannot be assigned a movement-specific mechanism from this analysis."
+      "interpretation": "The direction is notable as a descriptive broadband-power pattern, not as confirmed statistical evidence."
     },
     {
       "label": "Descriptive signal availability",
       "title": "Exponent estimates were more consistently available",
-      "statement": "An exponent estimate was returned for every fitted participant, while an injected-side theta peak was detected much less often.",
+      "statement": "By the nature of the aperiodic fit, a spectral exponent is available as a measurable metric for every fitted participant, whereas theta availability depends on whether the peak-detection rule identifies a peak.",
       "metric": "N=27 · exponent fits=27/27 · injected-side theta detected=6/27 · descriptive only",
-      "analysisPlan": "Detectability was summarized as an availability measure and was not an inferential endpoint.",
-      "interpretation": "The fitted exponent yields a continuous estimate more often than the peak-detection rule identifies theta.",
-      "caution": "Availability is not accuracy, validity, diagnostic performance, or proof that one feature is biologically superior."
+      "analysisPlan": "Availability was summarized descriptively; the exponent's lateralization was tested separately using the injected-minus-contralateral interaction.",
+      "interpretation": "The exponent was tested to determine whether it lateralized with the injected-side pharmacodynamics of methohexital.",
+      "caution": "Availability is not accuracy, validity, or diagnostic performance."
     }
   ],
   "resources": [
@@ -265,9 +355,9 @@
     {
       "id": "figures",
       "label": "View Selected Figures",
-      "description": "Candidate figures remain under scientific, privacy, and licensing review.",
-      "href": null,
-      "available": false,
+      "description": "The scientific panels embedded in the final v24 poster are available on this page.",
+      "href": "#figures",
+      "available": true,
       "download": false,
       "external": false
     },

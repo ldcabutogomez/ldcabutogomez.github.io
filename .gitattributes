@@ -1,0 +1,2 @@
+# Preserve exact bytes in scientific SVG assets extracted from the approved poster.
+assets/wada/figures/poster/*.svg -text -diff

@@ -17,7 +17,7 @@ The fixed primary standard-bipolar result remains:
 - Raw two-sided p=.019
 - Cohort: N=27
 
-The cohort is described as “a locked sample of 27 participants.” The page does not claim that the sample was preregistered. CSD results and montage comparisons are excluded; the only CSD reference is the title of a planned topographic visualization.
+The cohort is described as “a locked sample of 27 participants.” The page does not claim that the sample was preregistered. CSD numerical results, comparisons, and interpretations are excluded. The only public CSD assets are the alpha and delta topographies embedded in the owner-approved final poster.
 
 ## Stage acceptance
 
@@ -81,7 +81,7 @@ Commit: `ed5d8b4` (`feat(wada): publish final poster and focused copy`)
 
 ### Stage 6 — Audit and analytics control
 
-Commit: this audit commit
+Commit: `71cdaf7` (`chore(wada): add privacy controls and audit`)
 
 - PASS — one H1 and no heading-level jumps.
 - PASS — 176 visible text elements pass computed WCAG AA contrast in dark mode; minimum measured ratio is 8.05:1.
@@ -125,20 +125,33 @@ Lighthouse 12.8.2 was attempted twice at baseline but could not establish a usab
 
 The larger HTML response is intentional: content formerly injected at runtime is now present in the initial document. The smaller DOM and full no-JavaScript content coverage are the relevant delivery improvements.
 
+## Follow-up revision — author copy and final-poster panels
+
+After the six staged commits, Luis supplied the two previously deferred sentences and explicitly approved publishing the final poster’s scientific panels after confirming that the poster contains no PHI.
+
+- PASS — the role placeholder was replaced with the owner-supplied attribution: “Luis D. Cabuto-Gomez developed the entire EEG analysis pipeline.”
+- PASS — the calibration placeholder was replaced with the owner-supplied interpretation, preserving the fixed raw two-sided p=.019.
+- PASS — artifact handling now states that four-second epochs are flagged using robust and absolute peak-to-peak amplitude criteria, then manually reviewed, with at least 50 seconds required for manually curated baseline and anesthesia conditions.
+- PASS — panels A–I were extracted from the final v24 poster itself and cross-referenced against `results/poster_exports/`; decorative art, logos, QR assets, obsolete exports, and analysis caches were excluded.
+- PASS — all 13 embedded scientific images are published without cropping or scientific alteration, with descriptive alt text and full-size links.
+- PASS — bipolar remains the primary numerical analysis. CSD appears only in the poster’s alpha and delta topographies, with no CSD numerical result or montage comparison added.
+- PASS — the separate “Availability and timeline” block was removed. One scoped embargo statement remains for analysis exports not embedded in the approved poster.
+- PASS — the primary-result heading retains its existing H2 markup and visual format and now reads “The sedated hemisphere's exponent steepened, while the contralateral side did not.”
+- PASS — final JavaScript-on and JavaScript-off visible text is identical at 11,173 normalized characters, with no empty runtime content slots.
+- PASS — the final headless-browser audit found one H1, no heading-level jumps, four valid section anchors, no console or page errors, no analytics requests, and no horizontal overflow at 1440px or 320px.
+- PASS — all 188 checked visible text elements pass computed WCAG AA contrast in both themes; the minimum measured ratios are 8.05:1 in dark mode and 4.71:1 in light mode.
+
 ## Author TODOs remaining
 
-- `TODO(luis): role attribution` — one sentence in the author’s own voice about Luis’s contribution.
-- `TODO(luis): calibration sentence` — one sentence noting that the interval approaches zero and the result is preliminary.
-
-These remain placeholders because the brief prohibits generating first-person role claims or altering the scientific interpretation.
+None. Both author-controlled placeholders were resolved from text supplied directly by Luis.
 
 ## Deliberately not done
 
 - The portfolio root page was not edited because its social image is already a supported JPEG and no consistency change required touching it.
-- Standalone scientific figures and poster-export images were not published individually. Their embargo remains until aggregate-only replacements pass scientific, privacy, and licensing review. The user-approved final poster PDF is the only newly public scientific artifact.
-- No CSD numerical output, montage comparison, or CSD interpretation was added. Only the allowed “CSD topographies” resource title remains.
+- Analysis exports that are not embedded in the approved final poster were not published. Their embargo remains pending scientific, privacy, and licensing review.
+- No CSD numerical output, montage comparison, or CSD interpretation was added. CSD is limited to the alpha and delta topographies embedded in the approved poster.
 - No preregistration claim was made.
-- No first-person role or calibration sentence was invented.
+- No first-person role or calibration sentence was invented; the final attribution and interpretation were supplied directly by Luis.
 - No framework, package, or build dependency was added.
 - No analytics account or endpoint was invented; analytics remains off until a real GoatCounter endpoint is supplied.
 - No portfolio-root content was bundled into these commits.

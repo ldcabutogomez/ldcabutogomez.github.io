@@ -102,10 +102,10 @@
       <div class="hero-snapshot">
         <div class="takeaway-card">
           <p class="card-kicker">Primary result</p>
-          <h2 id="takeaway-title">The sedated hemisphere's exponent rose. Its twin did not.</h2>
+          <h2 id="takeaway-title">The sedated hemisphere's exponent steepened, while the contralateral side did not.</h2>
           <p class="takeaway-statement">In a locked sample of 27 participants, the standard-bipolar aperiodic exponent showed a positive injected-minus-contralateral interaction.</p>
           <p class="takeaway-note">The mean interaction was 0.245 exponent units (95% CI 0.043–0.447; raw two-sided p=.019) in the primary standard-bipolar analysis.</p>
-          <p class="author-todo">TODO(luis): calibration sentence</p>
+          <p class="takeaway-calibration">Following injection, exponent steepening was consistently greater in the injected hemisphere than in the contralateral hemisphere—a statistically significant difference (raw two-sided p=.019) supporting a localized anesthetic effect rather than a bilateral recording artifact.</p>
         </div>
         <div class="schematic-shell" aria-labelledby="schematic-title">
           <p class="card-kicker">Study design</p>
@@ -260,7 +260,7 @@
         <div>
           <p class="section-index">01 / Design</p>
           <h2 id="methods-title">From clinical EEG to a within-brain contrast</h2>
-          <p class="author-todo">TODO(luis): role attribution</p>
+          <p class="role-attribution">Luis D. Cabuto-Gomez developed the entire EEG analysis pipeline.</p>
         </div>
         <p>The current pipeline centers the predefined standard-bipolar montage and a paired, within-participant interaction.</p>
       </div>
@@ -278,7 +278,7 @@
         <article class="method-card">
           <p class="card-kicker">Quality control</p>
           <h3>Artifact handling</h3>
-          <p>Recordings use either approved manual clean segments or an objective 4-second epoch gate based on robust and absolute peak-to-peak amplitude. Standard conditions require at least 15 accepted epochs; curated conditions require at least 50 seconds.</p>
+          <p>Four-second epochs are flagged using robust and absolute peak-to-peak amplitude criteria and then manually reviewed in an additional artifact-review step. Manually curated baseline and anesthesia recordings require at least 50 seconds per condition.</p>
         </article>
         <article class="method-card">
           <p class="card-kicker">Primary montage</p>
@@ -327,7 +327,6 @@
           <p class="result-metric" aria-label="Supporting metrics: N=27 · mean interaction=0.245 · 95% CI 0.043–0.447 · t(26)=2.49 · raw two-sided p=.019">N=27 · mean interaction=0.245 · 95% CI 0.043–0.447 · t(26)=2.49 · raw two-sided p=.019</p>
           <p class="result-plan">The primary result is a two-sided paired t test of the injected-minus-contralateral interaction; the displayed p-value is raw and no standardized effect size is available in the saved aggregate result.</p>
           <p class="result-interpretation">The primary bipolar analysis supports a positive lateralized exponent change.</p>
-          <p class="result-caution"><strong>Caution: </strong>This result does not by itself establish a validated clinical biomarker or causal mechanism.</p>
         </article>
         <article class="result-card">
           <p class="card-kicker">Oscillatory comparison</p>
@@ -341,20 +340,19 @@
         <article class="result-card">
           <p class="card-kicker">Descriptive broadband feature</p>
           <h3>Aperiodic offset showed a positive direction</h3>
-          <p class="result-statement">The bipolar aperiodic offset had a positive average injected-minus-contralateral interaction, but it was not tested inferentially.</p>
+          <p class="result-statement">The bipolar aperiodic offset had a positive average injected-minus-contralateral interaction.</p>
           <p class="result-metric" aria-label="Supporting metrics: N=27 · mean interaction=0.721 · SD=0.478 · 26 positive / 1 negative · no inferential p-value">N=27 · mean interaction=0.721 · SD=0.478 · 26 positive / 1 negative · no inferential p-value</p>
           <p class="result-plan">Offset was summarized descriptively; no current hypothesis test, confidence interval, or multiplicity correction is available.</p>
           <p class="result-interpretation">The direction is notable as a descriptive broadband-power pattern, not as confirmed statistical evidence.</p>
-          <p class="result-caution"><strong>Caution: </strong>Offset is scale- and broadband-power-sensitive and cannot be assigned a movement-specific mechanism from this analysis.</p>
         </article>
         <article class="result-card">
           <p class="card-kicker">Descriptive signal availability</p>
           <h3>Exponent estimates were more consistently available</h3>
-          <p class="result-statement">An exponent estimate was returned for every fitted participant, while an injected-side theta peak was detected much less often.</p>
+          <p class="result-statement">By the nature of the aperiodic fit, a spectral exponent is available as a measurable metric for every fitted participant, whereas theta availability depends on whether the peak-detection rule identifies a peak.</p>
           <p class="result-metric" aria-label="Supporting metrics: N=27 · exponent fits=27/27 · injected-side theta detected=6/27 · descriptive only">N=27 · exponent fits=27/27 · injected-side theta detected=6/27 · descriptive only</p>
-          <p class="result-plan">Detectability was summarized as an availability measure and was not an inferential endpoint.</p>
-          <p class="result-interpretation">The fitted exponent yields a continuous estimate more often than the peak-detection rule identifies theta.</p>
-          <p class="result-caution"><strong>Caution: </strong>Availability is not accuracy, validity, diagnostic performance, or proof that one feature is biologically superior.</p>
+          <p class="result-plan">Availability was summarized descriptively; the exponent&#39;s lateralization was tested separately using the injected-minus-contralateral interaction.</p>
+          <p class="result-interpretation">The exponent was tested to determine whether it lateralized with the injected-side pharmacodynamics of methohexital.</p>
+          <p class="result-caution"><strong>Caution: </strong>Availability is not accuracy, validity, or diagnostic performance.</p>
         </article>
       </div>
     </section>
@@ -366,38 +364,124 @@
         <p class="wada-status status-current"><span class="status-dot" aria-hidden="true"></span><span>Primary bipolar analysis / results updated</span></p>
       </div>
 
-      <div class="status-grid">
-        <div class="status-block" aria-labelledby="figures-title">
-          <h3 id="figures-title">Figures, and why they are not public yet</h3>
-          <p>Standalone scientific figures remain embargoed until aggregate-only replacements complete scientific, privacy, and licensing review. The final poster PDF is public.</p>
-          <ul class="status-list" id="figures">
-            <li class="status-list-title-only">
-              <h4>Aggregate bipolar spectra</h4>
-            </li>
-            <li class="status-list-title-only">
-              <h4>Exponent and theta interaction summary</h4>
-            </li>
-            <li class="status-list-title-only">
-              <h4>Spectral-feature availability</h4>
-            </li>
-            <li class="status-list-title-only">
-              <h4>CSD topographies</h4>
-            </li>
-          </ul>
-        </div>
-
-        <div class="status-block" aria-labelledby="resources-title">
-          <h3 id="resources-title">Availability and timeline</h3>
-          <p>The final poster is available now. The next standalone figure release occurs when aggregate-only replacements satisfy the conditions stated under “Figures, and why they are not public yet.”</p>
-          <ul class="status-list" id="resource-grid">
-            <li>
-              <div>
-                <h4><a href="../assets/wada/poster/wada-eeg-poster.pdf" download>Download Full Poster</a></h4>
-                <p>The final one-page REVU poster is available as a PDF.</p>
-              </div>
-              <span>Available now</span>
-            </li>
-          </ul>
+      <div class="poster-figures" aria-labelledby="figures-title">
+        <header class="poster-figures-heading">
+          <h3 id="figures-title">Figures from the final poster</h3>
+          <p>Panels A–I below are the scientific figures embedded in the final v24 poster. Select any panel to open its full-size image.</p>
+          <p class="figure-release-note">These poster panels are public. Other standalone analysis exports remain embargoed pending scientific, privacy, and licensing review.</p>
+        </header>
+        <div class="poster-figure-grid" id="figures">
+          <figure class="poster-figure poster-figure-layout-wide" id="panel-a">
+            <header class="poster-figure-header">
+              <p>Panel A</p>
+              <h4>Raw EEG around injection</h4>
+            </header>
+            <div class="poster-figure-media poster-figure-media-wide">
+              <a class="poster-figure-image" href="../assets/wada/figures/poster/panel-a-waveform.svg" aria-label="Open panel A image at full size">
+                <img src="../assets/wada/figures/poster/panel-a-waveform.svg" width="969" height="322" loading="lazy" decoding="async" alt="Three raw EEG traces labeled F4, C4, and P4 around injection at time zero, with larger slow activity afterward.">
+              </a>
+            </div>
+            <figcaption>Single-participant raw EEG traces surrounding methohexital injection.</figcaption>
+          </figure>
+          <figure class="poster-figure poster-figure-layout-paired" id="panel-b">
+            <header class="poster-figure-header">
+              <p>Panel B</p>
+              <h4>Injected and contralateral spectral fits</h4>
+            </header>
+            <div class="poster-figure-media poster-figure-media-paired">
+              <a class="poster-figure-image" href="../assets/wada/figures/poster/panel-b-injected-fit.svg" aria-label="Open panel B image at full size">
+                <img src="../assets/wada/figures/poster/panel-b-injected-fit.svg" width="290" height="322" loading="lazy" decoding="async" alt="Injected-region log-power spectra with baseline and anesthesia fits.">
+              </a>
+              <a class="poster-figure-image" href="../assets/wada/figures/poster/panel-b-contralateral-fit.svg" aria-label="Open panel B image at full size">
+                <img src="../assets/wada/figures/poster/panel-b-contralateral-fit.svg" width="290" height="322" loading="lazy" decoding="async" alt="Contralateral-region log-power spectra with baseline and anesthesia fits.">
+              </a>
+            </div>
+            <figcaption>Single-participant Tier-1 bipolar spectral fits from the injected and contralateral regions.</figcaption>
+          </figure>
+          <figure class="poster-figure poster-figure-layout-wide" id="panel-c">
+            <header class="poster-figure-header">
+              <p>Panel C</p>
+              <h4>Single-participant peri-injection spectra</h4>
+            </header>
+            <div class="poster-figure-media poster-figure-media-wide">
+              <a class="poster-figure-image" href="../assets/wada/figures/poster/panel-c-subject-multitaper.png" aria-label="Open panel C image at full size">
+                <img src="../assets/wada/figures/poster/panel-c-subject-multitaper.png" width="8071" height="4730" loading="lazy" decoding="async" alt="Two time-frequency heat maps for injected and contralateral regions around injection at time zero.">
+              </a>
+            </div>
+            <figcaption>Time-resolved bipolar multitaper spectra for the injected and contralateral regions in the poster’s single-participant example.</figcaption>
+          </figure>
+          <figure class="poster-figure poster-figure-layout-quad" id="panels-d-e">
+            <header class="poster-figure-header">
+              <p>Panel D–E</p>
+              <h4>Alpha and delta CSD topographies</h4>
+            </header>
+            <div class="poster-figure-media poster-figure-media-quad">
+              <a class="poster-figure-image" href="../assets/wada/figures/poster/panel-d-alpha-baseline.png" aria-label="Open panel D–E image at full size">
+                <img src="../assets/wada/figures/poster/panel-d-alpha-baseline.png" width="2400" height="2255" loading="lazy" decoding="async" alt="CSD alpha-power scalp topography at baseline.">
+              </a>
+              <a class="poster-figure-image" href="../assets/wada/figures/poster/panel-d-alpha-anesthesia.png" aria-label="Open panel D–E image at full size">
+                <img src="../assets/wada/figures/poster/panel-d-alpha-anesthesia.png" width="2400" height="2255" loading="lazy" decoding="async" alt="CSD alpha-power scalp topography during anesthesia.">
+              </a>
+              <a class="poster-figure-image" href="../assets/wada/figures/poster/panel-e-delta-baseline.png" aria-label="Open panel D–E image at full size">
+                <img src="../assets/wada/figures/poster/panel-e-delta-baseline.png" width="2400" height="2255" loading="lazy" decoding="async" alt="CSD delta-power scalp topography at baseline.">
+              </a>
+              <a class="poster-figure-image" href="../assets/wada/figures/poster/panel-e-delta-anesthesia.png" aria-label="Open panel D–E image at full size">
+                <img src="../assets/wada/figures/poster/panel-e-delta-anesthesia.png" width="2400" height="2255" loading="lazy" decoding="async" alt="CSD delta-power scalp topography during anesthesia.">
+              </a>
+            </div>
+            <figcaption>The poster’s CSD scalp topographies provide spatial visualization for alpha and delta power at baseline and during anesthesia; no CSD numerical result is reported here.</figcaption>
+          </figure>
+          <figure class="poster-figure poster-figure-layout-wide" id="panel-f">
+            <header class="poster-figure-header">
+              <p>Panel F</p>
+              <h4>Group peri-injection spectra</h4>
+            </header>
+            <div class="poster-figure-media poster-figure-media-wide">
+              <a class="poster-figure-image" href="../assets/wada/figures/poster/panel-f-group-multitaper.png" aria-label="Open panel F image at full size">
+                <img src="../assets/wada/figures/poster/panel-f-group-multitaper.png" width="8071" height="4730" loading="lazy" decoding="async" alt="Two cohort time-frequency heat maps for injected and contralateral regions around injection at time zero.">
+              </a>
+            </div>
+            <figcaption>Cohort-level standard-bipolar multitaper spectra aligned to the injected hemisphere (N=27).</figcaption>
+          </figure>
+          <figure class="poster-figure poster-figure-layout-paired" id="panel-g">
+            <header class="poster-figure-header">
+              <p>Panel G</p>
+              <h4>Primary-region bipolar spectra</h4>
+            </header>
+            <div class="poster-figure-media poster-figure-media-paired">
+              <a class="poster-figure-image" href="../assets/wada/figures/poster/panel-g-injected-psd.svg" aria-label="Open panel G image at full size">
+                <img src="../assets/wada/figures/poster/panel-g-injected-psd.svg" width="290" height="322" loading="lazy" decoding="async" alt="Group injected-hemisphere log-power spectra at baseline and during anesthesia.">
+              </a>
+              <a class="poster-figure-image" href="../assets/wada/figures/poster/panel-g-contralateral-psd.svg" aria-label="Open panel G image at full size">
+                <img src="../assets/wada/figures/poster/panel-g-contralateral-psd.svg" width="290" height="322" loading="lazy" decoding="async" alt="Group contralateral-hemisphere log-power spectra at baseline and during anesthesia.">
+              </a>
+            </div>
+            <figcaption>Group primary-ROI bipolar spectra for the injected and contralateral hemispheres.</figcaption>
+          </figure>
+          <figure class="poster-figure poster-figure-layout-wide" id="panel-h">
+            <header class="poster-figure-header">
+              <p>Panel H</p>
+              <h4>Primary bipolar exponent and theta results</h4>
+            </header>
+            <div class="poster-figure-media poster-figure-media-wide">
+              <a class="poster-figure-image" href="../assets/wada/figures/poster/panel-h-exponent-theta.svg" aria-label="Open panel H image at full size">
+                <img src="../assets/wada/figures/poster/panel-h-exponent-theta.svg" width="778" height="389" loading="lazy" decoding="async" alt="Paired baseline and anesthesia plots for injected and contralateral aperiodic exponent and theta peak strength.">
+              </a>
+            </div>
+            <figcaption>The poster’s paired exponent and theta summary for the N=27 primary standard-bipolar analysis.</figcaption>
+          </figure>
+          <figure class="poster-figure poster-figure-layout-standard" id="panel-i">
+            <header class="poster-figure-header">
+              <p>Panel I</p>
+              <h4>Bipolar peak detectability</h4>
+            </header>
+            <div class="poster-figure-media poster-figure-media-standard">
+              <a class="poster-figure-image" href="../assets/wada/figures/poster/panel-i-peak-detectability.svg" aria-label="Open panel I image at full size">
+                <img src="../assets/wada/figures/poster/panel-i-peak-detectability.svg" width="497" height="259" loading="lazy" decoding="async" alt="Bar chart showing exponent estimates for 27 of 27 participants, alpha peaks for 12 of 27, and theta peaks for 6 of 27.">
+              </a>
+            </div>
+            <figcaption>Availability of exponent estimates and detected alpha and theta peaks in the poster cohort.</figcaption>
+          </figure>
         </div>
       </div>
 

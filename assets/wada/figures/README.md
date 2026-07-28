@@ -1,19 +1,20 @@
 # Wada figure assets
 
-Place reviewed, web-preview copies of the final scientific figures in this directory. Keep full-resolution originals unchanged and store their public download copies separately when needed.
+This directory contains reviewed web copies of the final scientific figures. Keep full-resolution originals unchanged and store their public download copies separately when needed.
 
-Suggested preview filenames:
+The `poster/` subdirectory contains only panels A–I embedded in `FINAL v24 REVU.pptx`:
 
-- `01-bipolar-spectra.webp`
-- `02-bipolar-results.webp`
-- `03-feature-availability.webp`
-- `04-csd-topographies.webp`
+- Panel A: single-participant waveform
+- Panel B: injected and contralateral bipolar spectral fits
+- Panel C: single-participant bipolar multitaper spectra
+- Panels D–E: CSD alpha and delta topographies
+- Panel F: N=27 group bipolar multitaper spectra
+- Panel G: injected and contralateral group bipolar spectra
+- Panel H: exponent and theta paired summary
+- Panel I: spectral-feature detectability
 
-After adding a figure, update its `image`, intrinsic `width`, intrinsic `height`, `alt`, `caption`, and optional `fullResolutionUrl` fields in `wada/content.js`. The figure component uses `object-fit: contain` and never crops the image.
+The files were extracted from the owner-approved final poster after cross-referencing its embedded-media relationships against `results/poster_exports/`. Panels with more than one embedded image retain each source image separately. Update paths, intrinsic dimensions, alt text, and captions in `wada/content.json`; the figure component uses `object-fit: contain` and never crops an image.
 
 Do not alter scientific axes, legends, colors, morphology, values, or aspect ratios when preparing previews.
 
-The website reports bipolar results only. CSD assets are limited to topographic
-visualization and must be labeled as such; do not add CSD statistics or montage
-comparisons. Never publish participant-level clinical figures without documented
-scientific and privacy approval.
+The website reports bipolar numerical results only. CSD assets are limited to the poster’s topographic visualization and must be labeled as such; do not add CSD statistics or montage comparisons. The owner confirmed that the final poster contains no PHI and approved publishing its embedded panels. Other exports remain outside the public asset set.

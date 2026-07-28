@@ -83,14 +83,11 @@ const blocks = {
   LOGIC: content.scientificLogic.map((step, index) => `        <li class="logic-step">\n          <span class="logic-number">${String(index + 1).padStart(2, "0")}</span>\n          <h3>${escapeHtml(step.title)}</h3>\n          <p>${escapeHtml(step.description)}</p>\n        </li>`).join("\n"),
   QUESTIONS: content.researchQuestion.points.map((point) => `        <article class="question-card">\n          <h3>${escapeHtml(point.title)}</h3>\n          <p>${escapeHtml(point.text)}</p>\n        </article>`).join("\n"),
   METHODS: content.methods.map((method) => `        <article class="method-card">\n          <p class="card-kicker">${escapeHtml(method.label)}</p>\n          <h3>${escapeHtml(method.title)}</h3>\n          <p${method.summary.includes("[") ? ' class="placeholder-aware"' : ""}>${escapeHtml(method.summary)}</p>\n        </article>`).join("\n"),
-  FIGURES: content.figures.map((figure) => `            <li class="status-list-title-only">\n              <h4>${escapeHtml(figure.title)}</h4>\n            </li>`).join("\n"),
-  RESULTS: content.results.map((result) => `        <article class="result-card">\n          <p class="card-kicker">${escapeHtml(result.label)}</p>\n          <h3>${escapeHtml(result.title)}</h3>\n          <p class="result-statement">${escapeHtml(result.statement)}</p>\n          <p class="result-metric" aria-label="${escapeHtml(`Supporting metrics: ${result.metric}`)}">${escapeHtml(result.metric)}</p>\n          <p class="result-plan${result.analysisPlan.includes("[") ? " placeholder-aware" : ""}">${escapeHtml(result.analysisPlan)}</p>\n          <p class="result-interpretation${result.interpretation.includes("[") ? " placeholder-aware" : ""}">${escapeHtml(result.interpretation)}</p>\n          <p class="result-caution"><strong>Caution: </strong>${escapeHtml(result.caution)}</p>\n        </article>`).join("\n"),
-  RESOURCES: content.resources.filter((resource) => resource.available && resource.id !== "contact").map((resource) => {
-    const label = resource.available
-      ? `<a ${renderLinkAttributes(resource)}>${escapeHtml(resource.label)}${resource.external ? externalHint : ""}</a>`
-      : escapeHtml(resource.label);
-    return `            <li>\n              <div>\n                <h4>${label}</h4>\n                <p>${escapeHtml(resource.description)}</p>\n              </div>\n              <span>Available now</span>\n            </li>`;
+  FIGURES: content.figures.map((figure) => {
+    const images = figure.images.map((item) => `              <a class="poster-figure-image" href="${escapeHtml(item.src)}" aria-label="${escapeHtml(`Open panel ${figure.panel} image at full size`)}">\n                <img src="${escapeHtml(item.src)}" width="${escapeHtml(item.width)}" height="${escapeHtml(item.height)}" loading="lazy" decoding="async" alt="${escapeHtml(item.alt)}">\n              </a>`).join("\n");
+    return `          <figure class="poster-figure poster-figure-layout-${escapeHtml(figure.layout)}" id="${escapeHtml(figure.id)}">\n            <header class="poster-figure-header">\n              <p>Panel ${escapeHtml(figure.panel)}</p>\n              <h4>${escapeHtml(figure.title)}</h4>\n            </header>\n            <div class="poster-figure-media poster-figure-media-${escapeHtml(figure.layout)}">\n${images}\n            </div>\n            <figcaption>${escapeHtml(figure.caption)}</figcaption>\n          </figure>`;
   }).join("\n"),
+  RESULTS: content.results.map((result) => `        <article class="result-card">\n          <p class="card-kicker">${escapeHtml(result.label)}</p>\n          <h3>${escapeHtml(result.title)}</h3>\n          <p class="result-statement">${escapeHtml(result.statement)}</p>\n          <p class="result-metric" aria-label="${escapeHtml(`Supporting metrics: ${result.metric}`)}">${escapeHtml(result.metric)}</p>\n          <p class="result-plan${result.analysisPlan.includes("[") ? " placeholder-aware" : ""}">${escapeHtml(result.analysisPlan)}</p>\n          <p class="result-interpretation${result.interpretation.includes("[") ? " placeholder-aware" : ""}">${escapeHtml(result.interpretation)}</p>${result.caution ? `\n          <p class="result-caution"><strong>Caution: </strong>${escapeHtml(result.caution)}</p>` : ""}\n        </article>`).join("\n"),
   CONTACT_LINKS: [
     { label: "Email Luis", href: contactHref },
     { label: "Main portfolio", href: content.identity.portfolio },
@@ -114,9 +111,11 @@ const tokens = {
   PAGE_SUBTITLE: content.page.subtitle,
   TAKEAWAY_STATEMENT: content.takeaway.statement,
   TAKEAWAY_NOTE: content.takeaway.note,
+  TAKEAWAY_CALIBRATION: content.takeaway.calibration,
   WITHIN_BRAIN_DESIGN: content.withinBrainDesign,
   RESEARCH_INTRODUCTION: content.researchQuestion.introduction,
   AFFILIATION: content.identity.affiliation,
+  ROLE_ATTRIBUTION: content.identity.roleAttribution,
   ATTRIBUTION_PRIMARY: content.attribution.primary,
   ATTRIBUTION_SUPPORTING: content.attribution.supporting,
   ATTRIBUTION_CITATION: content.attribution.citation,

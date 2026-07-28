@@ -78,10 +78,10 @@
       <div class="hero-snapshot">
         <div class="takeaway-card">
           <p class="card-kicker">Primary result</p>
-          <h2 id="takeaway-title">The sedated hemisphere's exponent rose. Its twin did not.</h2>
+          <h2 id="takeaway-title">The sedated hemisphere's exponent steepened, while the contralateral side did not.</h2>
           <p class="takeaway-statement">{{TAKEAWAY_STATEMENT}}</p>
           <p class="takeaway-note">{{TAKEAWAY_NOTE}}</p>
-          <p class="author-todo">TODO(luis): calibration sentence</p>
+          <p class="takeaway-calibration">{{TAKEAWAY_CALIBRATION}}</p>
         </div>
         <div class="schematic-shell" aria-labelledby="schematic-title">
           <p class="card-kicker">Study design</p>
@@ -178,7 +178,7 @@
         <div>
           <p class="section-index">01 / Design</p>
           <h2 id="methods-title">From clinical EEG to a within-brain contrast</h2>
-          <p class="author-todo">TODO(luis): role attribution</p>
+          <p class="role-attribution">{{ROLE_ATTRIBUTION}}</p>
         </div>
         <p>The current pipeline centers the predefined standard-bipolar montage and a paired, within-participant interaction.</p>
       </div>
@@ -205,21 +205,14 @@
         <p class="wada-status status-current"><span class="status-dot" aria-hidden="true"></span><span>{{PAGE_STATUS}}</span></p>
       </div>
 
-      <div class="status-grid">
-        <div class="status-block" aria-labelledby="figures-title">
-          <h3 id="figures-title">Figures, and why they are not public yet</h3>
-          <p>Standalone scientific figures remain embargoed until aggregate-only replacements complete scientific, privacy, and licensing review. The final poster PDF is public.</p>
-          <ul class="status-list" id="figures">
+      <div class="poster-figures" aria-labelledby="figures-title">
+        <header class="poster-figures-heading">
+          <h3 id="figures-title">Figures from the final poster</h3>
+          <p>Panels A–I below are the scientific figures embedded in the final v24 poster. Select any panel to open its full-size image.</p>
+          <p class="figure-release-note">These poster panels are public. Other standalone analysis exports remain embargoed pending scientific, privacy, and licensing review.</p>
+        </header>
+        <div class="poster-figure-grid" id="figures">
 <!-- WADA:FIGURES -->
-          </ul>
-        </div>
-
-        <div class="status-block" aria-labelledby="resources-title">
-          <h3 id="resources-title">Availability and timeline</h3>
-          <p>The final poster is available now. The next standalone figure release occurs when aggregate-only replacements satisfy the conditions stated under “Figures, and why they are not public yet.”</p>
-          <ul class="status-list" id="resource-grid">
-<!-- WADA:RESOURCES -->
-          </ul>
         </div>
       </div>
 
