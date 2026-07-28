@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{DOCUMENT_TITLE}}</title>
+  <meta name="description" content="{{PAGE_DESCRIPTION}}">
+  <meta name="author" content="{{AUTHOR}}">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a1114">
+
+  <link rel="canonical" href="{{CANONICAL_URL}}">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:title" content="{{SOCIAL_TITLE}}">
+  <meta property="og:description" content="{{SOCIAL_DESCRIPTION}}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="{{CANONICAL_URL}}">
+  <meta property="og:site_name" content="Luis Cabuto">
+  <meta property="og:image" content="{{SOCIAL_IMAGE}}">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{SOCIAL_IMAGE_ALT}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{SOCIAL_TITLE}}">
+  <meta name="twitter:description" content="{{SOCIAL_DESCRIPTION}}">
+  <meta name="twitter:image" content="{{SOCIAL_IMAGE}}">
+  <meta name="twitter:image:alt" content="{{SOCIAL_IMAGE_ALT}}">
+
+  <script type="application/ld+json">
+<!-- WADA:STRUCTURED_DATA -->
+  </script>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="wada.css">
+  <script src="../script.js" defer></script>
+</head>
+
+<body class="wada-page" id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header wada-header">
+    <nav class="nav shell" aria-label="Wada project navigation">
+      <a class="wordmark" href="../" aria-label="Return to Luis Cabuto’s portfolio">
+        <span class="wordmark-mark" aria-hidden="true">W</span>
+        <span class="wordmark-text">Wada EEG</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <a class="wada-back-link" href="../">← Portfolio</a>
+        <a href="#overview">Overview</a>
+        <a href="#methods">Methods</a>
+        <a href="#results">Results</a>
+        <a href="#resources">Resources</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <header class="wada-hero shell" aria-labelledby="wada-title">
+      <div class="wada-hero-copy">
+        <p class="wada-status"><span class="status-dot" aria-hidden="true"></span><span>{{PAGE_STATUS}}</span></p>
+        <h1 id="wada-title">{{PAGE_TITLE}}</h1>
+        <p class="wada-poster-title">{{POSTER_TITLE}}</p>
+        <p class="wada-subtitle">{{PAGE_SUBTITLE}}</p>
+
+        <div class="wada-actions" id="hero-actions" aria-label="Project actions">
+<!-- WADA:HERO_ACTIONS -->
+        </div>
+        <p class="wada-short-url"><span aria-hidden="true">↳</span> <span>{{SHORT_URL}}</span></p>
+      </div>
+
+      <aside class="wada-identity" aria-labelledby="project-team-title">
+        <p class="card-kicker">Project team</p>
+        <h2 id="project-team-title">{{AUTHOR}}</h2>
+        <dl id="identity-list">
+<!-- WADA:IDENTITY -->
+        </dl>
+      </aside>
+    </header>
+
+    <section class="wada-section shell" id="overview" aria-labelledby="takeaway-title" data-nav-section>
+      <div class="takeaway-card">
+        <p class="section-index">01 / Main takeaway</p>
+        <h2 id="takeaway-title">The result, at a glance</h2>
+        <p class="takeaway-statement">{{TAKEAWAY_STATEMENT}}</p>
+        <p class="takeaway-note">{{TAKEAWAY_NOTE}}</p>
+      </div>
+    </section>
+
+    <section class="wada-section shell" aria-labelledby="logic-title">
+      <div class="wada-section-heading">
+        <div>
+          <p class="section-index">02 / Scientific logic</p>
+          <h2 id="logic-title">One perturbation, two hemispheres</h2>
+        </div>
+        <p>A concise map from the clinical procedure to the analysis contrast.</p>
+      </div>
+      <ol class="logic-flow" id="logic-flow">
+<!-- WADA:LOGIC -->
+      </ol>
+      <aside class="within-brain-note" aria-labelledby="within-brain-title">
+        <p class="card-kicker">Within-brain design</p>
+        <h3 id="within-brain-title">Each participant provides a simultaneous comparison</h3>
+        <p>{{WITHIN_BRAIN_DESIGN}}</p>
+      </aside>
+    </section>
+
+    <section class="wada-section shell" aria-labelledby="question-title">
+      <div class="wada-section-heading">
+        <div>
+          <p class="section-index">03 / Research question</p>
+          <h2 id="question-title">What signal is spatially specific?</h2>
+        </div>
+        <p>{{RESEARCH_INTRODUCTION}}</p>
+      </div>
+      <div class="question-grid" id="question-grid">
+<!-- WADA:QUESTIONS -->
+      </div>
+    </section>
+
+    <section class="wada-section shell" id="methods" aria-labelledby="methods-title" data-nav-section>
+      <div class="wada-section-heading">
+        <div>
+          <p class="section-index">04 / Key methods</p>
+          <h2 id="methods-title">From clinical EEG to a within-brain contrast</h2>
+        </div>
+        <p>The current pipeline centers the predefined standard-bipolar montage and a paired, within-participant interaction.</p>
+      </div>
+      <div class="method-grid" id="method-grid">
+<!-- WADA:METHODS -->
+      </div>
+    </section>
+
+    <section class="wada-section shell" id="analysis" aria-labelledby="figures-title">
+      <div class="wada-section-heading">
+        <div>
+          <p class="section-index">05 / Featured figures</p>
+          <h2 id="figures-title">Explore the analysis</h2>
+        </div>
+        <p>Candidate figures remain private until scientific, privacy, and licensing review is complete; CSD is retained only for candidate topographic visualization.</p>
+      </div>
+      <div class="figure-grid" id="figures">
+<!-- WADA:FIGURES -->
+      </div>
+    </section>
+
+    <section class="wada-section shell" id="results" aria-labelledby="results-title" data-nav-section>
+      <div class="wada-section-heading">
+        <div>
+          <p class="section-index">06 / Results summary</p>
+          <h2 id="results-title">Primary bipolar findings</h2>
+        </div>
+        <p>Aggregate results distinguish the primary exponent interaction from oscillatory and descriptive comparison measures.</p>
+      </div>
+      <div class="result-grid" id="result-grid">
+<!-- WADA:RESULTS -->
+      </div>
+    </section>
+
+    <section class="wada-section shell" id="resources" aria-labelledby="resources-title" data-nav-section>
+      <div class="wada-section-heading">
+        <div>
+          <p class="section-index">07 / Resources</p>
+          <h2 id="resources-title">Continue exploring</h2>
+        </div>
+        <p>Downloads remain unavailable until each resource passes its required scientific, privacy, and licensing review.</p>
+      </div>
+      <div class="resource-grid" id="resource-grid">
+<!-- WADA:RESOURCES -->
+      </div>
+    </section>
+
+    <section class="wada-section shell" aria-labelledby="contact-title">
+      <div class="contact-panel">
+        <div>
+          <p class="section-index">08 / Contact &amp; attribution</p>
+          <h2 id="contact-title">Questions are welcome</h2>
+          <p>For questions about the methods, project status, or future poster release, contact {{AUTHOR}} at {{AFFILIATION}}.</p>
+          <div class="contact-links" id="contact-links">
+<!-- WADA:CONTACT_LINKS -->
+          </div>
+        </div>
+        <div class="attribution-list">
+          <div>
+            <h3>Primary mentorship</h3>
+            <p>{{ATTRIBUTION_PRIMARY}}</p>
+          </div>
+          <div>
+            <h3>Collaborating support</h3>
+            <p>{{ATTRIBUTION_SUPPORTING}}</p>
+          </div>
+          <div>
+            <h3>How to reference this project</h3>
+            <p>{{ATTRIBUTION_CITATION}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <noscript>
+      <div class="noscript-note shell">All project content is available above. JavaScript is used only for navigation enhancements.</div>
+    </noscript>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell wada-footer-inner">
+      <p>© 2026 Luis D. Cabuto-Gomez. All rights reserved.</p>
+      <p>{{PAGE_STATUS}} · Page updated {{LAST_UPDATED}}</p>
+      <a href="../">Return to the main portfolio <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
+</body>
+</html>
