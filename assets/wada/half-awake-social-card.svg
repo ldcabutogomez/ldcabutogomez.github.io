@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Half Awake social card</title>
+  <desc id="description">A dark teal title card reading Half Awake and describing a primary bipolar EEG analysis of a within-participant hemispheric perturbation.</desc>
+  <rect width="1200" height="630" fill="#091013"/>
+  <path d="M0 105h1200M0 210h1200M0 315h1200M0 420h1200M0 525h1200M200 0v630M400 0v630M600 0v630M800 0v630M1000 0v630" stroke="#84c9ee" stroke-opacity=".055"/>
+  <circle cx="1028" cy="315" r="178" fill="#09211f" stroke="#63dece" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M1028 137a178 178 0 0 0 0 356z" fill="#63dece" fill-opacity=".08"/>
+  <path d="M1028 137v356" stroke="#84c9ee" stroke-opacity=".55" stroke-width="2"/>
+  <circle cx="1028" cy="315" r="12" fill="#63dece"/>
+  <rect x="72" y="68" width="64" height="64" fill="#09211f" stroke="#63dece" stroke-width="2"/>
+  <text x="104" y="109" fill="#63dece" font-family="ui-monospace, monospace" font-size="28" font-weight="700" text-anchor="middle">W</text>
+  <text x="168" y="110" fill="#63dece" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="3">WADA EEG · PRIMARY BIPOLAR ANALYSIS</text>
+  <text x="72" y="257" fill="#edf4f2" font-family="Georgia, serif" font-size="88">Half Awake</text>
+  <text x="72" y="338" fill="#a8b8b7" font-family="ui-sans-serif, sans-serif" font-size="31">Primary bipolar EEG analysis of a rare</text>
+  <text x="72" y="382" fill="#a8b8b7" font-family="ui-sans-serif, sans-serif" font-size="31">within-participant hemispheric perturbation</text>
+  <line x1="72" y1="472" x2="858" y2="472" stroke="#63dece" stroke-opacity=".5"/>
+  <text x="72" y="526" fill="#84c9ee" font-family="ui-monospace, monospace" font-size="18" letter-spacing="1">LUIS D. CABUTO-GOMEZ · YALE UNIVERSITY</text>
+  <text x="72" y="568" fill="#f0c678" font-family="ui-monospace, monospace" font-size="17">ldcabutogomez.github.io/wada/</text>
+</svg>

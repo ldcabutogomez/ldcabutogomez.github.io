@@ -28,7 +28,7 @@ The permanent GitHub Pages route is `/wada/`, generated directly from `wada/inde
 - Put only scientifically reviewed, privacy-reviewed, and appropriately licensed web-preview figures in `assets/wada/figures/`; follow that directory's README and keep full-resolution scientific originals unmodified.
 - Add the final poster PDF at a stable path such as `assets/wada/poster/wada-eeg-poster.pdf`, then set the poster resource's `href` and `available: true` in `wada/content.js`. Until then, the poster control displays “Coming soon” without a link.
 - Update abstract, supplement, code, and figure-download URLs in the centralized `resources` and `figures` arrays. An unavailable resource should keep `available: false` and `href: null`.
-- Replace `assets/wada/wada-og-placeholder.svg` with a reviewed sharing image and update the Open Graph metadata in `wada/index.html` when final artwork is available.
+- The current social card is generated from `assets/wada/half-awake-social-card.svg`; keep its PNG export at `assets/wada/half-awake-social-card.png` at exactly 1200×630 pixels.
 
 To preview from the repository root, run the local server below and open `http://localhost:8000/wada/`.
 
