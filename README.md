@@ -18,6 +18,8 @@ Raw source material belongs in a local `website-context/` directory, which is in
 
 The portfolio pages are otherwise edited directly in HTML. After changing Wada content or its template, run `node scripts/render-wada.mjs`.
 
+Privacy-respecting GoatCounter analytics is configured for the Wada page in `wada/content.json` and defaults to `enabled: false`. To enable it, create the site's GoatCounter endpoint, paste that URL into `analytics.endpoint`, and set `enabled` to `true`; the static renderer then emits the official `count.js` snippet. GoatCounter does not set cookies, and the page makes no analytics requests while the flag is off.
+
 ## Updating the Wada EEG page
 
 The permanent GitHub Pages route is `/wada/`. The deployment workflow renders `wada/index.html` before GitHub Pages uploads the repository.

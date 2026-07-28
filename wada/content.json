@@ -1,4 +1,10 @@
 {
+  "analytics": {
+    "enabled": false,
+    "provider": "goatcounter",
+    "endpoint": "",
+    "scriptSrc": "https://gc.zgo.at/count.js"
+  },
   "contentReview": {
     "overallStatus": "current primary analysis",
     "methodsStatus": "current implemented bipolar pipeline",

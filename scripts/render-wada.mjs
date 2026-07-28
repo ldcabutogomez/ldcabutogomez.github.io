@@ -39,6 +39,15 @@ const renderAction = (item, { label = item?.label, primary = false } = {}) => {
 
 const poster = content.resources.find(({ id }) => id === "poster");
 const contactHref = `${content.identity.email}?subject=Wada%20EEG%20project`;
+const analytics = content.analytics;
+
+const renderAnalytics = () => {
+  if (!analytics?.enabled) return "";
+  if (analytics.provider !== "goatcounter" || !analytics.endpoint || !analytics.scriptSrc) {
+    throw new Error("Enabled Wada analytics must use GoatCounter with an endpoint and scriptSrc.");
+  }
+  return `  <script data-goatcounter="${escapeHtml(analytics.endpoint)}" async src="${escapeHtml(analytics.scriptSrc)}"></script>`;
+};
 
 const blocks = {
   STRUCTURED_DATA: JSON.stringify({
@@ -58,6 +67,7 @@ const blocks = {
       affiliation: { "@type": "CollegeOrUniversity", name: "Yale School of Medicine" }
     }
   }, null, 4).replaceAll("<", "\\u003c"),
+  ANALYTICS: renderAnalytics(),
   HERO_ACTIONS: [
     renderAction(poster, { label: "View Full Poster", primary: true }),
     renderAction({ label: "Read the Findings", href: "#findings", available: true }, { primary: true }),
