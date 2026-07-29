@@ -31,9 +31,9 @@
     "author": "Luis D. Cabuto-Gomez",
     "affiliation": "Yale University",
     "program": "REVU Summer Research Program 2026",
-    "primaryMentor": "Janna Helfrich, MD — Yale School of Medicine",
+    "primaryMentor": "Janna Helfrich, MD (Yale School of Medicine)",
     "researchGroup": "Janna Helfrich, MD’s research group",
-    "supportingLab": "Randolph Helfrich, MD, PhD / Randolph Helfrich Lab — collaborating and technical support",
+    "supportingLab": "Randolph Helfrich, MD, PhD / Randolph Helfrich Lab (collaborating and technical support)",
     "roleAttribution": "Luis D. Cabuto-Gomez developed the entire EEG analysis pipeline.",
     "email": "mailto:luis.cabuto@yale.edu",
     "github": "https://github.com/ldcabutogomez",
@@ -43,7 +43,7 @@
   "takeaway": {
     "statement": "In a sample of 27 participants, the standard-bipolar aperiodic exponent showed a positive injected-minus-contralateral interaction.",
     "note": "The mean interaction was 0.245 exponent units (95% CI 0.043–0.447; raw two-sided p=.019) in the primary standard-bipolar analysis.",
-    "calibration": "Following injection, exponent steepening was consistently greater in the injected hemisphere than in the contralateral hemisphere—a statistically significant difference (raw two-sided p=.019) supporting a localized anesthetic effect rather than a bilateral recording artifact."
+    "calibration": "Following injection, exponent steepening was consistently greater in the injected hemisphere than in the contralateral hemisphere. This statistically significant difference (raw two-sided p=.019) supports a localized anesthetic effect rather than a bilateral recording artifact."
   },
   "scientificLogic": [
     {

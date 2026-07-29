@@ -137,7 +137,7 @@ After the six staged commits, Luis supplied the two previously deferred sentence
 - PASS — bipolar remains the primary numerical analysis. CSD appears only in the poster’s alpha and delta topographies, with no CSD numerical result or montage comparison added.
 - PASS — the separate “Availability and timeline” block was removed. One scoped embargo statement remains for analysis exports not embedded in the approved poster.
 - PASS — the primary-result heading retains its existing H2 markup and visual format and now reads “The sedated hemisphere's exponent steepened, while the contralateral side did not.”
-- PASS — final JavaScript-on and JavaScript-off visible text is identical at 11,404 normalized characters, with no empty runtime content slots.
+- PASS — final JavaScript-on and JavaScript-off visible text is identical at 11,406 normalized characters, with no empty runtime content slots.
 - PASS — the final headless-browser audit found one H1, no heading-level jumps, four valid section anchors, no console or page errors, no analytics requests, and no horizontal overflow at 1440px or 320px.
 - PASS — all 188 checked visible text elements pass computed WCAG AA contrast in both themes; the minimum measured ratios are 8.05:1 in dark mode and 4.71:1 in light mode.
 - PASS — public copy contains no internal iteration label or non-public source path. The availability explanation accurately describes the same injected-versus-contralateral, baseline-to-anesthesia interaction being applied separately to aperiodic exponent and theta peak strength; it does not claim a direct cross-feature statistical test.
