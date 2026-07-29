@@ -115,7 +115,6 @@ const tokens = {
   WITHIN_BRAIN_DESIGN: content.withinBrainDesign,
   RESEARCH_INTRODUCTION: content.researchQuestion.introduction,
   AFFILIATION: content.identity.affiliation,
-  ROLE_ATTRIBUTION: content.identity.roleAttribution,
   ATTRIBUTION_PRIMARY: content.attribution.primary,
   ATTRIBUTION_SUPPORTING: content.attribution.supporting,
   ATTRIBUTION_CITATION: content.attribution.citation,

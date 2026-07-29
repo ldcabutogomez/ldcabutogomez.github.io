@@ -129,30 +129,30 @@ The larger HTML response is intentional: content formerly injected at runtime is
 
 After the six staged commits, Luis supplied the two previously deferred sentences and explicitly approved publishing the final poster’s scientific panels after confirming that the poster contains no PHI.
 
-- PASS — the role placeholder was replaced with the owner-supplied attribution: “Luis D. Cabuto-Gomez developed the entire EEG analysis pipeline.”
+- PASS — the role placeholder and its public-facing attribution sentence were removed at the author’s request.
 - PASS — the calibration placeholder was replaced with the owner-supplied interpretation, preserving the fixed raw two-sided p=.019.
 - PASS — artifact handling now states that four-second epochs are flagged using robust and absolute peak-to-peak amplitude criteria, then manually reviewed, with at least 50 seconds required for manually curated baseline and anesthesia conditions.
 - PASS — panels A–I are exact web copies of the approved final poster’s scientific images; decorative art, logos, QR assets, obsolete exports, and analysis caches were excluded.
 - PASS — all 13 embedded scientific images are published without cropping or scientific alteration, with descriptive alt text and full-size links.
 - PASS — bipolar remains the primary numerical analysis. CSD appears only in the poster’s alpha and delta topographies, with no CSD numerical result or montage comparison added.
-- PASS — the separate “Availability and timeline” block was removed. One scoped embargo statement remains for analysis exports not embedded in the approved poster.
+- PASS — the separate “Availability and timeline” block and the later gallery release-status note were removed at the author’s request.
 - PASS — the primary-result heading retains its existing H2 markup and visual format and now reads “The sedated hemisphere's exponent steepened, while the contralateral side did not.”
-- PASS — final JavaScript-on and JavaScript-off visible text is identical at 11,406 normalized characters, with no empty runtime content slots.
+- PASS — final JavaScript-on and JavaScript-off visible text is identical at 11,085 normalized characters, with no empty runtime content slots.
 - PASS — the final headless-browser audit found one H1, no heading-level jumps, four valid section anchors, no console or page errors, no analytics requests, and no horizontal overflow at 1440px or 320px.
-- PASS — all 188 checked visible text elements pass computed WCAG AA contrast in both themes; the minimum measured ratios are 8.05:1 in dark mode and 4.71:1 in light mode.
+- PASS — all 185 checked visible text elements pass computed WCAG AA contrast in both themes; the minimum measured ratios are 8.05:1 in dark mode and 4.71:1 in light mode.
 - PASS — public copy contains no internal iteration label or non-public source path. The availability explanation accurately describes the same injected-versus-contralateral, baseline-to-anesthesia interaction being applied separately to aperiodic exponent and theta peak strength; it does not claim a direct cross-feature statistical test.
 
 ## Author TODOs remaining
 
-None. Both author-controlled placeholders were resolved from text supplied directly by Luis.
+None. The calibration placeholder was resolved from text supplied directly by Luis, and the role-attribution placeholder and sentence were removed at his request.
 
 ## Deliberately not done
 
 - The portfolio root page was not edited because its social image is already a supported JPEG and no consistency change required touching it.
-- Analysis exports that are not embedded in the approved final poster were not published. Their embargo remains pending scientific, privacy, and licensing review.
+- Analysis exports that are not embedded in the approved final poster were not published.
 - No CSD numerical output, montage comparison, or CSD interpretation was added. CSD is limited to the alpha and delta topographies embedded in the approved poster.
 - No preregistration claim was made.
-- No first-person role or calibration sentence was invented; the final attribution and interpretation were supplied directly by Luis.
+- No first-person role or calibration sentence was invented; the calibration language was supplied directly by Luis, and the role-attribution sentence was removed at his request.
 - No framework, package, or build dependency was added.
 - No analytics account or endpoint was invented; analytics remains off until a real GoatCounter endpoint is supplied.
 - No portfolio-root content was bundled into these commits.
