@@ -2,7 +2,7 @@
 
 This directory contains reviewed web copies of the final scientific figures. Keep full-resolution originals unchanged and store their public download copies separately when needed.
 
-The `poster/` subdirectory contains only panels A–I embedded in `FINAL v24 REVU.pptx`:
+The `poster/` subdirectory contains only panels A–I embedded in the approved final poster:
 
 - Panel A: single-participant waveform
 - Panel B: injected and contralateral bipolar spectral fits
@@ -13,7 +13,7 @@ The `poster/` subdirectory contains only panels A–I embedded in `FINAL v24 REV
 - Panel H: exponent and theta paired summary
 - Panel I: spectral-feature detectability
 
-The files were extracted from the owner-approved final poster after cross-referencing its embedded-media relationships against `results/poster_exports/`. Panels with more than one embedded image retain each source image separately. Update paths, intrinsic dimensions, alt text, and captions in `wada/content.json`; the figure component uses `object-fit: contain` and never crops an image.
+The files are exact web copies of the owner-approved poster panels. Panels with more than one embedded image retain each source image separately. Update paths, intrinsic dimensions, alt text, and captions in `wada/content.json`; the figure component uses `object-fit: contain` and never crops an image.
 
 Do not alter scientific axes, legends, colors, morphology, values, or aspect ratios when preparing previews.
 

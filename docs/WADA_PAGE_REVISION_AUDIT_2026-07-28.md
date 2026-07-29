@@ -17,7 +17,7 @@ The fixed primary standard-bipolar result remains:
 - Raw two-sided p=.019
 - Cohort: N=27
 
-The cohort is described as “a locked sample of 27 participants.” The page does not claim that the sample was preregistered. CSD numerical results, comparisons, and interpretations are excluded. The only public CSD assets are the alpha and delta topographies embedded in the owner-approved final poster.
+The cohort is described as a sample of 27 participants. The page does not claim that the sample was preregistered. CSD numerical results, comparisons, and interpretations are excluded. The only public CSD assets are the alpha and delta topographies embedded in the owner-approved final poster.
 
 ## Stage acceptance
 
@@ -70,7 +70,7 @@ Commit: `ed5d8b4` (`feat(wada): publish final poster and focused copy`)
 - PASS — all required heading replacements were applied; all specified KEEP headings remain.
 - PASS — the hero contains one H1, one plain-English line, and the academic title in smaller type; the printed URL was removed.
 - PASS — the required sentence “The exponent effect held. The oscillatory measures did not.” is present.
-- PASS — the cohort is glossed as a locked sample of 27 participants, without a preregistration claim.
+- PASS — the cohort is identified as a sample of 27 participants, without a preregistration claim.
 - PASS — `TODO(luis): role attribution` is directly below the methods heading.
 - PASS — `TODO(luis): calibration sentence` is directly after the reported interval text.
 - PASS — the standalone-figure embargo is stated once. Later availability copy cross-references it instead of repeating it.
@@ -132,14 +132,15 @@ After the six staged commits, Luis supplied the two previously deferred sentence
 - PASS — the role placeholder was replaced with the owner-supplied attribution: “Luis D. Cabuto-Gomez developed the entire EEG analysis pipeline.”
 - PASS — the calibration placeholder was replaced with the owner-supplied interpretation, preserving the fixed raw two-sided p=.019.
 - PASS — artifact handling now states that four-second epochs are flagged using robust and absolute peak-to-peak amplitude criteria, then manually reviewed, with at least 50 seconds required for manually curated baseline and anesthesia conditions.
-- PASS — panels A–I were extracted from the final v24 poster itself and cross-referenced against `results/poster_exports/`; decorative art, logos, QR assets, obsolete exports, and analysis caches were excluded.
+- PASS — panels A–I are exact web copies of the approved final poster’s scientific images; decorative art, logos, QR assets, obsolete exports, and analysis caches were excluded.
 - PASS — all 13 embedded scientific images are published without cropping or scientific alteration, with descriptive alt text and full-size links.
 - PASS — bipolar remains the primary numerical analysis. CSD appears only in the poster’s alpha and delta topographies, with no CSD numerical result or montage comparison added.
 - PASS — the separate “Availability and timeline” block was removed. One scoped embargo statement remains for analysis exports not embedded in the approved poster.
 - PASS — the primary-result heading retains its existing H2 markup and visual format and now reads “The sedated hemisphere's exponent steepened, while the contralateral side did not.”
-- PASS — final JavaScript-on and JavaScript-off visible text is identical at 11,173 normalized characters, with no empty runtime content slots.
+- PASS — final JavaScript-on and JavaScript-off visible text is identical at 11,404 normalized characters, with no empty runtime content slots.
 - PASS — the final headless-browser audit found one H1, no heading-level jumps, four valid section anchors, no console or page errors, no analytics requests, and no horizontal overflow at 1440px or 320px.
 - PASS — all 188 checked visible text elements pass computed WCAG AA contrast in both themes; the minimum measured ratios are 8.05:1 in dark mode and 4.71:1 in light mode.
+- PASS — public copy contains no internal iteration label or non-public source path. The availability explanation accurately describes the same injected-versus-contralateral, baseline-to-anesthesia interaction being applied separately to aperiodic exponent and theta peak strength; it does not claim a direct cross-feature statistical test.
 
 ## Author TODOs remaining
 

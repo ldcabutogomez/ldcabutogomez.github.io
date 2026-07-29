@@ -9,8 +9,8 @@
     "overallStatus": "current primary analysis",
     "methodsStatus": "current implemented bipolar pipeline",
     "resultsStatus": "primary bipolar results updated",
-    "figuresStatus": "final v24 poster panels public",
-    "privacyAudit": "owner confirmed the final poster contains no PHI; only panels embedded in final v24 are published"
+    "figuresStatus": "approved poster panels public",
+    "privacyAudit": "owner confirmed the final poster contains no PHI; only panels embedded in the approved poster are published"
   },
   "page": {
     "documentTitle": "Half Awake | Wada EEG Project | Luis D. Cabuto-Gomez",
@@ -41,7 +41,7 @@
     "portfolio": "../"
   },
   "takeaway": {
-    "statement": "In a locked sample of 27 participants, the standard-bipolar aperiodic exponent showed a positive injected-minus-contralateral interaction.",
+    "statement": "In a sample of 27 participants, the standard-bipolar aperiodic exponent showed a positive injected-minus-contralateral interaction.",
     "note": "The mean interaction was 0.245 exponent units (95% CI 0.043–0.447; raw two-sided p=.019) in the primary standard-bipolar analysis.",
     "calibration": "Following injection, exponent steepening was consistently greater in the injected hemisphere than in the contralateral hemisphere—a statistically significant difference (raw two-sided p=.019) supporting a localized anesthetic effect rather than a bilateral recording artifact."
   },
@@ -321,7 +321,7 @@
       "metric": "N=27 · exponent fits=27/27 · injected-side theta detected=6/27 · descriptive only",
       "analysisPlan": "Availability was summarized descriptively; the exponent's lateralization was tested separately using the injected-minus-contralateral interaction.",
       "interpretation": "The exponent was tested to determine whether it lateralized with the injected-side pharmacodynamics of methohexital.",
-      "caution": "Availability is not accuracy, validity, or diagnostic performance."
+      "caution": "Availability alone does not imply that the metric is meaningful. Therefore, we tested whether the baseline-to-anesthesia change in aperiodic spectral exponent differed between the injected and contralateral hemispheres during the Wada procedure, and applied the same lateralized interaction test to theta peak strength."
     }
   ],
   "resources": [
@@ -355,7 +355,7 @@
     {
       "id": "figures",
       "label": "View Selected Figures",
-      "description": "The scientific panels embedded in the final v24 poster are available on this page.",
+      "description": "The scientific panels embedded in the approved final poster are available on this page.",
       "href": "#figures",
       "available": true,
       "download": false,
